@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE005FA02020F57300DC0DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005F9F2020F57300DC0DAF /* AppDelegate.swift */; };
+		CE005FA22020F57300DC0DAF /* ViewRemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005FA12020F57300DC0DAF /* ViewRemindersViewController.swift */; };
+		CE005FA52020F57300DC0DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE005FA32020F57300DC0DAF /* Main.storyboard */; };
+		CE005FA82020F57300DC0DAF /* eco_planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE005FA62020F57300DC0DAF /* eco_planner.xcdatamodeld */; };
+		CE005FAA2020F57300DC0DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE005FA92020F57300DC0DAF /* Assets.xcassets */; };
+		CE005FAD2020F57300DC0DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE005FAB2020F57300DC0DAF /* LaunchScreen.storyboard */; };
+		CE005FB82026467800DC0DAF /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005FB72026467800DC0DAF /* Reminder.swift */; };
+		CE005FBC202731E000DC0DAF /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005FBB202731E000DC0DAF /* RemindersController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE005F9C2020F57300DC0DAF /* eco_planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eco_planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE005F9F2020F57300DC0DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE005FA12020F57300DC0DAF /* ViewRemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRemindersViewController.swift; sourceTree = "<group>"; };
+		CE005FA42020F57300DC0DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE005FA72020F57300DC0DAF /* eco_planner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eco_planner.xcdatamodel; sourceTree = "<group>"; };
+		CE005FA92020F57300DC0DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE005FAC2020F57300DC0DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE005FAE2020F57300DC0DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE005FB72026467800DC0DAF /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		CE005FBB202731E000DC0DAF /* RemindersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE005F992020F57300DC0DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE005F932020F57300DC0DAF = {
+			isa = PBXGroup;
+			children = (
+				CE005F9E2020F57300DC0DAF /* eco_planner */,
+				CE005F9D2020F57300DC0DAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE005F9D2020F57300DC0DAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE005F9C2020F57300DC0DAF /* eco_planner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE005F9E2020F57300DC0DAF /* eco_planner */ = {
+			isa = PBXGroup;
+			children = (
+				CE005FB52020F75D00DC0DAF /* View */,
+				CE005FB62020F76500DC0DAF /* Controller */,
+				CE005FB42020F6FC00DC0DAF /* Model */,
+				CE005F9F2020F57300DC0DAF /* AppDelegate.swift */,
+				CE005FAB2020F57300DC0DAF /* LaunchScreen.storyboard */,
+				CE005FA92020F57300DC0DAF /* Assets.xcassets */,
+				CE005FAE2020F57300DC0DAF /* Info.plist */,
+				CE005FA62020F57300DC0DAF /* eco_planner.xcdatamodeld */,
+			);
+			path = eco_planner;
+			sourceTree = "<group>";
+		};
+		CE005FB42020F6FC00DC0DAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE005FB72026467800DC0DAF /* Reminder.swift */,
+				CE005FBB202731E000DC0DAF /* RemindersController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE005FB52020F75D00DC0DAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE005FA32020F57300DC0DAF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE005FB62020F76500DC0DAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE005FA12020F57300DC0DAF /* ViewRemindersViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE005F9B2020F57300DC0DAF /* eco_planner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "eco_planner" */;
+			buildPhases = (
+				CE005F982020F57300DC0DAF /* Sources */,
+				CE005F992020F57300DC0DAF /* Frameworks */,
+				CE005F9A2020F57300DC0DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eco_planner;
+			productName = eco_planner;
+			productReference = CE005F9C2020F57300DC0DAF /* eco_planner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE005F942020F57300DC0DAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Ruxi;
+				TargetAttributes = {
+					CE005F9B2020F57300DC0DAF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CE005F972020F57300DC0DAF /* Build configuration list for PBXProject "eco_planner" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE005F932020F57300DC0DAF;
+			productRefGroup = CE005F9D2020F57300DC0DAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE005F9B2020F57300DC0DAF /* eco_planner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE005F9A2020F57300DC0DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE005FAD2020F57300DC0DAF /* LaunchScreen.storyboard in Resources */,
+				CE005FAA2020F57300DC0DAF /* Assets.xcassets in Resources */,
+				CE005FA52020F57300DC0DAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE005F982020F57300DC0DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE005FBC202731E000DC0DAF /* RemindersController.swift in Sources */,
+				CE005FA22020F57300DC0DAF /* ViewRemindersViewController.swift in Sources */,
+				CE005FA82020F57300DC0DAF /* eco_planner.xcdatamodeld in Sources */,
+				CE005FA02020F57300DC0DAF /* AppDelegate.swift in Sources */,
+				CE005FB82026467800DC0DAF /* Reminder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE005FA32020F57300DC0DAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE005FA42020F57300DC0DAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE005FAB2020F57300DC0DAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE005FAC2020F57300DC0DAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE005FAF2020F57300DC0DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE005FB02020F57300DC0DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE005FB22020F57300DC0DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = eco_planner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE005FB32020F57300DC0DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = eco_planner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE005F972020F57300DC0DAF /* Build configuration list for PBXProject "eco_planner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE005FAF2020F57300DC0DAF /* Debug */,
+				CE005FB02020F57300DC0DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "eco_planner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE005FB22020F57300DC0DAF /* Debug */,
+				CE005FB32020F57300DC0DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE005FA62020F57300DC0DAF /* eco_planner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE005FA72020F57300DC0DAF /* eco_planner.xcdatamodel */,
+			);
+			currentVersion = CE005FA72020F57300DC0DAF /* eco_planner.xcdatamodel */;
+			path = eco_planner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE005F942020F57300DC0DAF /* Project object */;
+}
