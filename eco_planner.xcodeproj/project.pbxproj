@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9E5B79C411E8D6B6C39286B /* Pods_eco_planner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */; };
 		CE005FA02020F57300DC0DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005F9F2020F57300DC0DAF /* AppDelegate.swift */; };
 		CE005FA22020F57300DC0DAF /* ViewRemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005FA12020F57300DC0DAF /* ViewRemindersViewController.swift */; };
-		CE005FA52020F57300DC0DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE005FA32020F57300DC0DAF /* Main.storyboard */; };
+		CE005FA52020F57300DC0DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE005FA32020F57300DC0DAF /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		CE005FA82020F57300DC0DAF /* eco_planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE005FA62020F57300DC0DAF /* eco_planner.xcdatamodeld */; };
 		CE005FAA2020F57300DC0DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE005FA92020F57300DC0DAF /* Assets.xcassets */; };
 		CE005FAD2020F57300DC0DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE005FAB2020F57300DC0DAF /* LaunchScreen.storyboard */; };
 		CE005FB82026467800DC0DAF /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005FB72026467800DC0DAF /* Reminder.swift */; };
 		CE005FBC202731E000DC0DAF /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE005FBB202731E000DC0DAF /* RemindersController.swift */; };
+		CE6FBE57202B147100E90141 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FBE56202B147100E90141 /* AddReminderViewController.swift */; };
+		CE6FBE5920333BAB00E90141 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FBE5820333BAB00E90141 /* UIKitExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eco_planner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eco_planner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner.debug.xcconfig"; sourceTree = "<group>"; };
 		CE005F9C2020F57300DC0DAF /* eco_planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eco_planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE005F9F2020F57300DC0DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE005FA12020F57300DC0DAF /* ViewRemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRemindersViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +33,9 @@
 		CE005FAE2020F57300DC0DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE005FB72026467800DC0DAF /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		CE005FBB202731E000DC0DAF /* RemindersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
+		CE6FBE56202B147100E90141 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
+		CE6FBE5820333BAB00E90141 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eco_planner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E5B79C411E8D6B6C39286B /* Pods_eco_planner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A14ED9D4B7AAA1A01399E67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCD44A19AAE3F2EDCB6EDEED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */,
+				FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE005F932020F57300DC0DAF = {
 			isa = PBXGroup;
 			children = (
 				CE005F9E2020F57300DC0DAF /* eco_planner */,
 				CE005F9D2020F57300DC0DAF /* Products */,
+				CCD44A19AAE3F2EDCB6EDEED /* Pods */,
+				9A14ED9D4B7AAA1A01399E67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +91,7 @@
 				CE005FB52020F75D00DC0DAF /* View */,
 				CE005FB62020F76500DC0DAF /* Controller */,
 				CE005FB42020F6FC00DC0DAF /* Model */,
+				CE6FBE5820333BAB00E90141 /* UIKitExtensions.swift */,
 				CE005F9F2020F57300DC0DAF /* AppDelegate.swift */,
 				CE005FAB2020F57300DC0DAF /* LaunchScreen.storyboard */,
 				CE005FA92020F57300DC0DAF /* Assets.xcassets */,
@@ -93,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CE005FA12020F57300DC0DAF /* ViewRemindersViewController.swift */,
+				CE6FBE56202B147100E90141 /* AddReminderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "eco_planner" */;
 			buildPhases = (
+				2EF7D8E78E055EC4D56F67F5 /* [CP] Check Pods Manifest.lock */,
 				CE005F982020F57300DC0DAF /* Sources */,
 				CE005F992020F57300DC0DAF /* Frameworks */,
 				CE005F9A2020F57300DC0DAF /* Resources */,
+				6F72161539116463BFB6C9E7 /* [CP] Embed Pods Frameworks */,
+				72C2DD3D2ED0D857AC623117 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +156,10 @@
 		CE005F942020F57300DC0DAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Ruxi;
@@ -164,6 +201,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EF7D8E78E055EC4D56F67F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eco_planner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F72161539116463BFB6C9E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ZAlertView/ZAlertView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZAlertView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72C2DD3D2ED0D857AC623117 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE005F982020F57300DC0DAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -171,8 +262,10 @@
 			files = (
 				CE005FBC202731E000DC0DAF /* RemindersController.swift in Sources */,
 				CE005FA22020F57300DC0DAF /* ViewRemindersViewController.swift in Sources */,
+				CE6FBE5920333BAB00E90141 /* UIKitExtensions.swift in Sources */,
 				CE005FA82020F57300DC0DAF /* eco_planner.xcdatamodeld in Sources */,
 				CE005FA02020F57300DC0DAF /* AppDelegate.swift in Sources */,
+				CE6FBE57202B147100E90141 /* AddReminderViewController.swift in Sources */,
 				CE005FB82026467800DC0DAF /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +401,7 @@
 		};
 		CE005FB22020F57300DC0DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +416,7 @@
 		};
 		CE005FB32020F57300DC0DAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

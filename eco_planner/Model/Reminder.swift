@@ -8,18 +8,83 @@
 
 import UIKit
 
+enum WeekDay {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+    
+    init(weekDayNumber: Int) {
+        switch weekDayNumber {
+        case 1:
+            self = .monday
+        case 2:
+            self = .tuesday
+        case 3:
+            self = .wednesday
+        case 4:
+            self = .thursday
+        case 5:
+            self = .friday
+        case 6:
+            self = .saturday
+        case 7:
+            self = .sunday
+        default:
+            print("Error on weekday init")
+            self = .monday
+        }
+    }
+    
+    func stringValue() -> String {
+        switch self {
+        case .monday:
+            return "Monday"
+        case .tuesday:
+            return "Tuesday"
+        case .wednesday:
+            return "Wednesday"
+        case .thursday:
+            return "Thursday"
+        case .friday:
+            return "Friday"
+        case .saturday:
+            return "Saturday"
+        case .sunday:
+            return "Sunday"
+        }
+    }
+    
+    func letter() -> String {
+        switch self {
+        case .monday:
+            return "M"
+        case .tuesday, .thursday:
+            return "T"
+        case .wednesday:
+            return "W"
+        case .friday:
+            return "F"
+        case .saturday, .sunday:
+            return "S"
+        }
+    }
+}
+
 class Reminder: NSObject {
     
-    var title: String = ""
-    var time: NSDate
+    var title: String
+    var days: [WeekDay]
+    var time: (hour: Int, minute: Int)
+    var message: String?
     
-//    var notification: UILocalNotification
-    
-    init(title: String, time: NSDate /*, notification: UILocalNotification*/ ) {
+    init(title: String, days: [WeekDay], time: (hour: Int, minute: Int), message: String?) {
         self.title = title
+        self.days = days
         self.time = time
-//        self.notification = notification
-        
-        super.init()
+        self.message = message
     }
 }
