@@ -8,8 +8,8 @@
 
 import UIKit
 
-enum WeekDay {
-    case monday
+enum WeekDay: Int {
+    case monday = 1
     case tuesday
     case wednesday
     case thursday
@@ -80,6 +80,15 @@ class Reminder: NSObject {
     var days: [WeekDay]
     var time: (hour: Int, minute: Int)
     var message: String?
+    
+    override init() {
+        self.title = ""
+        self.days = []
+        self.time = (0, 0)
+        self.message = ""
+        
+        super.init()
+    }
     
     init(title: String, days: [WeekDay], time: (hour: Int, minute: Int), message: String?) {
         self.title = title

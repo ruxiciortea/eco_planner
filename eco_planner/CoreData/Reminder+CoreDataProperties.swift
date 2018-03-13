@@ -15,10 +15,9 @@ extension PersistentReminder {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<PersistentReminder> {
         return NSFetchRequest<PersistentReminder>(entityName: "PersistentReminder")
     }
-
-    @NSManaged public var days: [String]?
-    @NSManaged public var message: String?
+    
+    @NSManaged public var title: String
+    @NSManaged public var days: [Int]
     @NSManaged public var time: [Int]
-    @NSManaged public var title: String?
-
+    @NSManaged public var message: String?
 }
