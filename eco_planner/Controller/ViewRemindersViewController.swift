@@ -48,8 +48,6 @@ class ViewRemindersViewController: UIViewController, UITableViewDelegate, UITabl
         
         return cell
     }
-  
-    //Delete reminder:
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -63,14 +61,10 @@ class ViewRemindersViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.endUpdates()
     }
     
-    //Edit reminder:
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndexPaht = indexPath
         self.performSegue(withIdentifier: "EditReminderSegue", sender: nil)
     }
-
-    //Add or edit?:
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let segueDestination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddReminderViewController

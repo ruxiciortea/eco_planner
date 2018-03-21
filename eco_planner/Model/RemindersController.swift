@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+private let kReminderEntityName = "PersistentReminder"
+
 class RemindersController: NSObject {
 
     static let sharedInstance: RemindersController = RemindersController()
@@ -16,7 +18,9 @@ class RemindersController: NSObject {
     private var remindersArray:[Reminder] = []
 
     private override init() {
+        super.init()
         
+        self.fetchFromCoreData()
     }
     
     func addReminder(newReminder: Reminder) {
@@ -38,6 +42,19 @@ class RemindersController: NSObject {
     func removeReminder(index: Int) {
         if index >= remindersArray.count {
             return
+        }
+        
+        let reminder = self.remindersArray[index]
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: kReminderEntityName)
+        fetchRequest.predicate = NSPredicate(format: "title == %@", reminder.title/*, reminder.message*/)
+        
+        do {
+            if let result = (try self.persistentContainer.viewContext.fetch(fetchRequest) as! [PersistentReminder]).first {
+                self.persistentContainer.viewContext.delete(result)
+                self.saveContext()
+            }
+        } catch {
         }
         
         remindersArray.remove(at: index)
@@ -67,12 +84,6 @@ class RemindersController: NSObject {
     // MARK:- Core Data
 
     private lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-         */
         let container = NSPersistentContainer(name: "Core Data")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -88,8 +99,6 @@ class RemindersController: NSObject {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
@@ -97,7 +106,7 @@ class RemindersController: NSObject {
     }
 
     private func fetchFromCoreData() {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "PersistentReminder")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: kReminderEntityName)
 
         do {
             let results = try persistentContainer.viewContext.fetch(request) as! [PersistentReminder]

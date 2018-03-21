@@ -113,6 +113,7 @@
                                         <state key="normal" title="M"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="bR1-i8-f3S"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="hr6-3V-Xo5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQJ-yD-fWv">
@@ -121,6 +122,7 @@
                                         <state key="normal" title="T"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="mBP-6o-XCw"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="c2k-Pl-pmh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="wednesday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ol-jV-V7t">
@@ -129,6 +131,7 @@
                                         <state key="normal" title="W"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="tP0-td-gCX"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="RON-AC-b06"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-b7-jFF">
@@ -137,6 +140,7 @@
                                         <state key="normal" title="T"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="aIS-dB-Wa1"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="5O2-Bd-2bE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-lX-1op">
@@ -145,6 +149,7 @@
                                         <state key="normal" title="F"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="5qZ-A9-w2s"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="qhX-bq-LV9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-r3-ehX">
@@ -153,6 +158,7 @@
                                         <state key="normal" title="S"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="wJK-KM-fVd"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="ZaC-ka-rsR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-RI-vbC">
@@ -161,6 +167,7 @@
                                         <state key="normal" title="S"/>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="quy-Oa-Dxa"/>
+                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="9bN-pA-lyh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -215,7 +222,7 @@
                                 <action selector="cancelButtonPressed:" destination="k7W-pV-11q" id="NBb-6d-YxL"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7PR-BO-MZm">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="7PR-BO-MZm">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="k7W-pV-11q" id="deJ-qn-E3p"/>
                             </connections>
@@ -234,11 +241,12 @@
                         <outletCollection property="dayButtons" destination="PDh-b7-jFF" collectionClass="NSMutableArray" id="ARB-Uh-XHc"/>
                         <outletCollection property="dayButtons" destination="EZJ-lX-1op" collectionClass="NSMutableArray" id="nJL-On-sfg"/>
                         <outletCollection property="dayButtons" destination="eOt-r3-ehX" collectionClass="NSMutableArray" id="loY-Qk-aKY"/>
+                        <outletCollection property="dayButtons" destination="Hzm-RI-vbC" collectionClass="NSMutableArray" id="kAQ-8i-GlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qi9-65-aVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="364"/>
+            <point key="canvasLocation" x="577" y="364"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UVE-Uw-f8M">
@@ -254,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhM-ED-dP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1164" y="-426"/>
+            <point key="canvasLocation" x="-2062" y="364"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gGH-Yh-wNd">

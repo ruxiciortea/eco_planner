@@ -70,8 +70,19 @@ class AddReminderViewController: UIViewController {
         saveReminderButton.isEnabled = self.titleTextField.text != nil && !self.titleTextField.text!.isEmpty
     }
     
+    @IBAction func selectedButtonsCheck(_ sender: Any) {
+        for button in dayButtons {
+            if button.isSelected {
+                saveReminderButton.isEnabled = true
+                return
+            }
+        }
+        
+        saveReminderButton.isEnabled = false
+    }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
-        let title: String = self.titleTextField.text!
+        let title: String = self.titleTextField.text ?? "No title"
         let message: String? = self.messageTextField.text
         let days: [WeekDay] = self.getSelectedWeekDays()
         
@@ -110,7 +121,7 @@ class AddReminderViewController: UIViewController {
     
     func setZalertView() {
         let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
-        
+
         alertView.addButton("1") { (_) in
             self.titleTextField.text = "1"
             self.messageTextField.text = "1"
@@ -126,7 +137,7 @@ class AddReminderViewController: UIViewController {
             self.messageTextField.text = "3"
             alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
         }
-        
+
         alertView.show()
     }
     
