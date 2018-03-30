@@ -18,7 +18,7 @@
 		CE5784E72058281E008525D0 /* Reminder+PersistentReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5784E62058281E008525D0 /* Reminder+PersistentReminder.swift */; };
 		CE8A27DA2052FE72009ED31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A27C72052FE72009ED31E /* Assets.xcassets */; };
 		CE8A27DB2052FE72009ED31E /* Core Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27C82052FE72009ED31E /* Core Data.xcdatamodeld */; };
-		CE8A27DE2052FE72009ED31E /* ViewRemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27CE2052FE72009ED31E /* ViewRemindersViewController.swift */; };
+		CE8A27DE2052FE72009ED31E /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */; };
 		CE8A27E02052FE72009ED31E /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D02052FE72009ED31E /* AddReminderViewController.swift */; };
 		CE8A27E22052FE72009ED31E /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D32052FE72009ED31E /* RemindersController.swift */; };
 		CE8A27E32052FE72009ED31E /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D42052FE72009ED31E /* Reminder.swift */; };
@@ -38,7 +38,7 @@
 		CE5784E62058281E008525D0 /* Reminder+PersistentReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+PersistentReminder.swift"; sourceTree = "<group>"; };
 		CE8A27C72052FE72009ED31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8A27C92052FE72009ED31E /* eco_planner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eco_planner.xcdatamodel; sourceTree = "<group>"; };
-		CE8A27CE2052FE72009ED31E /* ViewRemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRemindersViewController.swift; sourceTree = "<group>"; };
+		CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		CE8A27D02052FE72009ED31E /* AddReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 		CE8A27D32052FE72009ED31E /* RemindersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
 		CE8A27D42052FE72009ED31E /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		CE8A27CC2052FE72009ED31E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A27CE2052FE72009ED31E /* ViewRemindersViewController.swift */,
+				CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */,
 				CE8A27D02052FE72009ED31E /* AddReminderViewController.swift */,
 			);
 			path = Controller;
@@ -281,7 +281,7 @@
 			files = (
 				CE5784D420530435008525D0 /* AppDelegate.swift in Sources */,
 				CE5784E42056C4EC008525D0 /* Reminder+CoreDataClass.swift in Sources */,
-				CE8A27DE2052FE72009ED31E /* ViewRemindersViewController.swift in Sources */,
+				CE8A27DE2052FE72009ED31E /* RemindersViewController.swift in Sources */,
 				CE8A27E02052FE72009ED31E /* AddReminderViewController.swift in Sources */,
 				CE8A27E22052FE72009ED31E /* RemindersController.swift in Sources */,
 				CE8A27E32052FE72009ED31E /* Reminder.swift in Sources */,
@@ -407,11 +407,14 @@
 			baseConfigurationReference = 8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = eco_planner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,11 +425,14 @@
 			baseConfigurationReference = FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = eco_planner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

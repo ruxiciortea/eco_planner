@@ -35,14 +35,12 @@ class AddReminderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleTextField.placeholderColor = kFadedBlueColor!
-        self.messageTextField.placeholderColor = kFadedBlueColor!
-        self.timePicker.setValue(kTextColor, forKey: "textColor")
         self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
         
         if let reminder = self.reminder {
             titleTextField.text = reminder.title
             messageTextField.text = reminder.message
+            selectDaysForEditingReminder(days: reminder.days)
             
             var dateComponents = DateComponents()
             dateComponents.hour = reminder.time.hour
@@ -54,7 +52,6 @@ class AddReminderViewController: UIViewController {
            
             saveReminderButton.isEnabled = true
             saveReminderButton.title = "Done"
-            
         } else {
             setZalertView()
         }
@@ -82,11 +79,11 @@ class AddReminderViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: self.timePicker.date)
+        
         let title: String = self.titleTextField.text ?? "No title"
         let message: String? = self.messageTextField.text
         let days: [WeekDay] = self.getSelectedWeekDays()
-        
-        let components = Calendar.current.dateComponents([.hour, .minute], from: self.timePicker.date)
         let time = (hour: components.hour!, minute: components.minute!)
         
         let newReminder = Reminder(title: title, days: days, time: time, message: message)
@@ -119,6 +116,16 @@ class AddReminderViewController: UIViewController {
         return selectedWeekDays
     }
     
+    func selectDaysForEditingReminder(days: [WeekDay]) {
+        for day in days {
+            for button in dayButtons {
+                if button.restorationIdentifier == "\(day)" {
+                    button.isSelected = true
+                }
+            }
+        }
+    }
+    
     func setZalertView() {
         let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
 
@@ -127,17 +134,25 @@ class AddReminderViewController: UIViewController {
             self.messageTextField.text = "1"
             alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
         }
+        
         alertView.addButton("2") { (_) in
             self.titleTextField.text = "2"
             self.messageTextField.text = "2"
             alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
         }
+        
         alertView.addButton("3") { (_) in
             self.titleTextField.text = "3"
             self.messageTextField.text = "3"
             alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
         }
-
+        
+        alertView.addButton("Other") { (_) in
+            self.titleTextField.text = ""
+            self.messageTextField.text = ""
+            alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
+        }
+        
         alertView.show()
     }
     

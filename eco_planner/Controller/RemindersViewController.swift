@@ -13,7 +13,7 @@ let kNavyBlueColor = UIColor(named: "NavyBlue")
 let kFadedBlueColor = UIColor(named: "FadedBlue")
 let kTextColor = UIColor(named: "TextColor")
 
-class ViewRemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddReminderViewControllerDelegate {
+class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddReminderViewControllerDelegate {
  
     @IBOutlet weak var remindersTableView: UITableView!
     
@@ -28,6 +28,7 @@ class ViewRemindersViewController: UIViewController, UITableViewDelegate, UITabl
         remindersTableView.reloadData()
         
         self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +45,8 @@ class ViewRemindersViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuse")
         let reminder = RemindersController.sharedInstance.getReminders()[indexPath.row]
         
-        cell.textLabel?.text = "\(reminder.title)"
+        cell.textLabel?.text = "\(formatateHour(number: reminder.time.hour)):\(formatateHour(number: reminder.time.minute))"
+        cell.detailTextLabel?.text = "\(reminder.title)"
         
         return cell
     }
@@ -86,6 +88,15 @@ class ViewRemindersViewController: UIViewController, UITableViewDelegate, UITabl
         if segue.identifier == "EditReminderSegue" {
             segueDestination?.reminder = RemindersController.sharedInstance.getReminders()[selectedIndexPaht!.row]
         }
+    }
+    
+    func formatateHour(number: Int) -> String {
+        if number < 10 {
+            let result = "0\(number)"
+            return result
+        }
+        
+        return "\(number)"
     }
 }
 

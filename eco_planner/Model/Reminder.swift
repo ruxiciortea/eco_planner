@@ -96,4 +96,6 @@ class Reminder: NSObject {
         self.time = time
         self.message = message
     }
+    
+    
 }

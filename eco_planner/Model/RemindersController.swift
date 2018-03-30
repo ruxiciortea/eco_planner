@@ -47,7 +47,11 @@ class RemindersController: NSObject {
         let reminder = self.remindersArray[index]
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: kReminderEntityName)
-        fetchRequest.predicate = NSPredicate(format: "title == %@", reminder.title/*, reminder.message*/)
+        fetchRequest.predicate = NSPredicate(format: "title == %@ AND time == %@ AND days == %@ AND message == %@",
+                                             reminder.title,
+                                             [reminder.time.hour, reminder.time.minute],
+                                             Reminder.convertWeekDaysToInts(weekDays: reminder.days),
+                                             reminder.message ?? "")
         
         do {
             if let result = (try self.persistentContainer.viewContext.fetch(fetchRequest) as! [PersistentReminder]).first {
@@ -69,7 +73,7 @@ class RemindersController: NSObject {
         reminder.title = newReminder.title
         reminder.days = newReminder.days
         reminder.time = newReminder.time
-        reminder.message = newReminder.message
+        reminder.message = newReminder.message        
     }
     
     func convertTime(time: (hour: Int, minute: Int)) -> [Int] {
@@ -81,7 +85,7 @@ class RemindersController: NSObject {
         return convertedTime
     }
     
-    // MARK:- Core Data
+    // MARK: - Core Data
 
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Core Data")
@@ -118,4 +122,6 @@ class RemindersController: NSObject {
             print("Fetch failed")
         }
     }
+    
+    // MARK: - Functions
 }
