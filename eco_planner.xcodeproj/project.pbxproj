@@ -112,8 +112,8 @@
 				CE5784E82058282C008525D0 /* CoreData */,
 				CE5784D520530441008525D0 /* UIKitExtensions.swift */,
 				CE5784D320530435008525D0 /* AppDelegate.swift */,
-				CE5784DE2056C301008525D0 /* LaunchScreen.storyboard */,
 				CE8A27C72052FE72009ED31E /* Assets.xcassets */,
+				CE5784DE2056C301008525D0 /* LaunchScreen.storyboard */,
 				CE5784D72053044A008525D0 /* Info.plist */,
 			);
 			path = eco_planner;

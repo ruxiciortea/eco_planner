@@ -29,7 +29,6 @@ class AddReminderViewController: UIViewController {
     var reminder: Reminder?
     
     var daysArrayIndex: Int?
-    
     let ZAlerViewDismissDuration = 0.2
     
     override func viewDidLoad() {
@@ -45,15 +44,20 @@ class AddReminderViewController: UIViewController {
             var dateComponents = DateComponents()
             dateComponents.hour = reminder.time.hour
             dateComponents.minute = reminder.time.minute
-            
+
             if let date = Calendar.current.date(bySettingHour: reminder.time.hour, minute: reminder.time.minute, second: 0, of: Date()) {
                 timePicker.date = date
             }
-           
+            
             saveReminderButton.isEnabled = true
-            saveReminderButton.title = "Done"
         } else {
-            setZalertView()
+            let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
+            
+            self.setZalertView(alertView: alertView, title: "1", message: "1")
+            self.setZalertView(alertView: alertView, title: "2", message: "2")
+            self.setZalertView(alertView: alertView, title: "Other", message: "")
+            
+            alertView.show()
         }
     }
     
@@ -86,7 +90,7 @@ class AddReminderViewController: UIViewController {
         let days: [WeekDay] = self.getSelectedWeekDays()
         let time = (hour: components.hour!, minute: components.minute!)
         
-        let newReminder = Reminder(title: title, days: days, time: time, message: message)
+        let newReminder = Reminder(title: title, message: message, days: days, time: time)
         
         if reminder == nil {
             self.reminderAddedBlock?(newReminder)
@@ -126,34 +130,17 @@ class AddReminderViewController: UIViewController {
         }
     }
     
-    func setZalertView() {
-        let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
-
-        alertView.addButton("1") { (_) in
-            self.titleTextField.text = "1"
-            self.messageTextField.text = "1"
+    func setZalertView(alertView: ZAlertView, title: String, message: String) {
+        alertView.addButton(title) { (_) in
+            if title != "Other" {
+                self.titleTextField.text = title
+            } else {
+                self.titleTextField.text = ""
+            }
+            
+            self.messageTextField.text = message
             alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
         }
-        
-        alertView.addButton("2") { (_) in
-            self.titleTextField.text = "2"
-            self.messageTextField.text = "2"
-            alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
-        }
-        
-        alertView.addButton("3") { (_) in
-            self.titleTextField.text = "3"
-            self.messageTextField.text = "3"
-            alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
-        }
-        
-        alertView.addButton("Other") { (_) in
-            self.titleTextField.text = ""
-            self.messageTextField.text = ""
-            alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
-        }
-        
-        alertView.show()
     }
     
     //        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(smthTapped))

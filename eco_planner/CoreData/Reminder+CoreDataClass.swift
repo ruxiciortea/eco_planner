@@ -12,5 +12,4 @@ import CoreData
 
 @objc(PersistentReminder)
 public class PersistentReminder: NSManagedObject {
-
 }

@@ -31,6 +31,8 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationController?.navigationBar.tintColor = .white
     }
     
+    // MARK: - Reminders TableView
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
@@ -51,6 +53,11 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPaht = indexPath
+        self.performSegue(withIdentifier: "EditReminderSegue", sender: nil)
+    }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -63,11 +70,8 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.endUpdates()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndexPaht = indexPath
-        self.performSegue(withIdentifier: "EditReminderSegue", sender: nil)
-    }
-    
+    // MARK: - Functions
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let segueDestination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddReminderViewController
         

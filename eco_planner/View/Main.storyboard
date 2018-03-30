@@ -228,7 +228,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" restorationIdentifier="saturday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-r3-ehX" customClass="RoundButton" customModule="eco_planner" customModuleProvider="target">
-                                        <rect key="frame" x="262.5" y="1" width="38" height="38"/>
+                                        <rect key="frame" x="263" y="1" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="1hQ-kq-bIj"/>
                                             <constraint firstAttribute="width" constant="38" id="tPn-rb-fQT"/>

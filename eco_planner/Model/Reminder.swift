@@ -77,9 +77,9 @@ enum WeekDay: Int {
 class Reminder: NSObject {
     
     var title: String
+    var message: String?
     var days: [WeekDay]
     var time: (hour: Int, minute: Int)
-    var message: String?
     
     override init() {
         self.title = ""
@@ -90,11 +90,11 @@ class Reminder: NSObject {
         super.init()
     }
     
-    init(title: String, days: [WeekDay], time: (hour: Int, minute: Int), message: String?) {
+    init(title: String, message: String?, days: [WeekDay], time: (hour: Int, minute: Int)) {
         self.title = title
+        self.message = message
         self.days = days
         self.time = time
-        self.message = message
     }
     
     
