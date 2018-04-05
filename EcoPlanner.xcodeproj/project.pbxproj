@@ -19,15 +19,15 @@
 		CE8A27DA2052FE72009ED31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A27C72052FE72009ED31E /* Assets.xcassets */; };
 		CE8A27DB2052FE72009ED31E /* Core Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27C82052FE72009ED31E /* Core Data.xcdatamodeld */; };
 		CE8A27DE2052FE72009ED31E /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */; };
-		CE8A27E02052FE72009ED31E /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D02052FE72009ED31E /* AddReminderViewController.swift */; };
-		CE8A27E22052FE72009ED31E /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D32052FE72009ED31E /* RemindersController.swift */; };
+		CE8A27E02052FE72009ED31E /* AddOrEditReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D02052FE72009ED31E /* AddOrEditReminderViewController.swift */; };
+		CE8A27E22052FE72009ED31E /* RemindersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D32052FE72009ED31E /* RemindersManager.swift */; };
 		CE8A27E32052FE72009ED31E /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D42052FE72009ED31E /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eco_planner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eco_planner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner.debug.xcconfig"; sourceTree = "<group>"; };
-		CE005F9C2020F57300DC0DAF /* eco_planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eco_planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE005F9C2020F57300DC0DAF /* EcoPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5784D320530435008525D0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5784D520530441008525D0 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		CE5784D72053044A008525D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,8 +39,8 @@
 		CE8A27C72052FE72009ED31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8A27C92052FE72009ED31E /* eco_planner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eco_planner.xcdatamodel; sourceTree = "<group>"; };
 		CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
-		CE8A27D02052FE72009ED31E /* AddReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
-		CE8A27D32052FE72009ED31E /* RemindersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
+		CE8A27D02052FE72009ED31E /* AddOrEditReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOrEditReminderViewController.swift; sourceTree = "<group>"; };
+		CE8A27D32052FE72009ED31E /* RemindersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersManager.swift; sourceTree = "<group>"; };
 		CE8A27D42052FE72009ED31E /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eco_planner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +77,7 @@
 		CE005F932020F57300DC0DAF = {
 			isa = PBXGroup;
 			children = (
-				CE8A27C62052FE72009ED31E /* eco_planner */,
+				CE8A27C62052FE72009ED31E /* EcoPlanner */,
 				CE005F9D2020F57300DC0DAF /* Products */,
 				CCD44A19AAE3F2EDCB6EDEED /* Pods */,
 				9A14ED9D4B7AAA1A01399E67 /* Frameworks */,
@@ -87,7 +87,7 @@
 		CE005F9D2020F57300DC0DAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE005F9C2020F57300DC0DAF /* eco_planner.app */,
+				CE005F9C2020F57300DC0DAF /* EcoPlanner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,7 +103,7 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		CE8A27C62052FE72009ED31E /* eco_planner */ = {
+		CE8A27C62052FE72009ED31E /* EcoPlanner */ = {
 			isa = PBXGroup;
 			children = (
 				CE8A27D22052FE72009ED31E /* Model */,
@@ -116,14 +116,14 @@
 				CE5784DE2056C301008525D0 /* LaunchScreen.storyboard */,
 				CE5784D72053044A008525D0 /* Info.plist */,
 			);
-			path = eco_planner;
+			path = EcoPlanner;
 			sourceTree = "<group>";
 		};
 		CE8A27CC2052FE72009ED31E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */,
-				CE8A27D02052FE72009ED31E /* AddReminderViewController.swift */,
+				CE8A27D02052FE72009ED31E /* AddOrEditReminderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 		CE8A27D22052FE72009ED31E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A27D32052FE72009ED31E /* RemindersController.swift */,
+				CE8A27D32052FE72009ED31E /* RemindersManager.swift */,
 				CE8A27D42052FE72009ED31E /* Reminder.swift */,
 			);
 			path = Model;
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE005F9B2020F57300DC0DAF /* eco_planner */ = {
+		CE005F9B2020F57300DC0DAF /* EcoPlanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "eco_planner" */;
+			buildConfigurationList = CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "EcoPlanner" */;
 			buildPhases = (
 				2EF7D8E78E055EC4D56F67F5 /* [CP] Check Pods Manifest.lock */,
 				CE005F982020F57300DC0DAF /* Sources */,
@@ -163,9 +163,9 @@
 			);
 			dependencies = (
 			);
-			name = eco_planner;
+			name = EcoPlanner;
 			productName = eco_planner;
-			productReference = CE005F9C2020F57300DC0DAF /* eco_planner.app */;
+			productReference = CE005F9C2020F57300DC0DAF /* EcoPlanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE005F972020F57300DC0DAF /* Build configuration list for PBXProject "eco_planner" */;
+			buildConfigurationList = CE005F972020F57300DC0DAF /* Build configuration list for PBXProject "EcoPlanner" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -201,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE005F9B2020F57300DC0DAF /* eco_planner */,
+				CE005F9B2020F57300DC0DAF /* EcoPlanner */,
 			);
 		};
 /* End PBXProject section */
@@ -282,8 +282,8 @@
 				CE5784D420530435008525D0 /* AppDelegate.swift in Sources */,
 				CE5784E42056C4EC008525D0 /* Reminder+CoreDataClass.swift in Sources */,
 				CE8A27DE2052FE72009ED31E /* RemindersViewController.swift in Sources */,
-				CE8A27E02052FE72009ED31E /* AddReminderViewController.swift in Sources */,
-				CE8A27E22052FE72009ED31E /* RemindersController.swift in Sources */,
+				CE8A27E02052FE72009ED31E /* AddOrEditReminderViewController.swift in Sources */,
+				CE8A27E22052FE72009ED31E /* RemindersManager.swift in Sources */,
 				CE8A27E32052FE72009ED31E /* Reminder.swift in Sources */,
 				CE5784D620530441008525D0 /* UIKitExtensions.swift in Sources */,
 				CE8A27DB2052FE72009ED31E /* Core Data.xcdatamodeld in Sources */,
@@ -410,7 +410,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = eco_planner/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPlanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,7 +428,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = eco_planner/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPlanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE005F972020F57300DC0DAF /* Build configuration list for PBXProject "eco_planner" */ = {
+		CE005F972020F57300DC0DAF /* Build configuration list for PBXProject "EcoPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE005FAF2020F57300DC0DAF /* Debug */,
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "eco_planner" */ = {
+		CE005FB12020F57300DC0DAF /* Build configuration list for PBXNativeTarget "EcoPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE005FB22020F57300DC0DAF /* Debug */,

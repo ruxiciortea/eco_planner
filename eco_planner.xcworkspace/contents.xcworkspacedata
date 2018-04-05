@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:eco_planner.xcodeproj">
+      location = "group:/Users/user/Desktop/Repos/eco_planner/EcoPlanner.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -12,14 +12,13 @@ import ZAlertView
 protocol AddReminderViewControllerDelegate: class {
 }
 
-class AddReminderViewController: UIViewController {
+class AddOrEditReminderViewController: UIViewController {
     
     @IBOutlet weak var saveReminderButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var buttonsView: UIView!
     @IBOutlet var dayButtons: [UIButton]!
     
     var reminderAddedBlock: ((Reminder) -> ())?
@@ -27,9 +26,9 @@ class AddReminderViewController: UIViewController {
         
     var delegate: AddReminderViewControllerDelegate?
     var reminder: Reminder?
-    
     var daysArrayIndex: Int?
-    let ZAlerViewDismissDuration = 0.2
+    var buttonsCheck = false
+    var textFieldCheck = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +48,7 @@ class AddReminderViewController: UIViewController {
                 timePicker.date = date
             }
             
-            saveReminderButton.isEnabled = true
+            self.saveReminderButton.isEnabled = true
         } else {
             let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
             
@@ -68,18 +67,33 @@ class AddReminderViewController: UIViewController {
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {
-        saveReminderButton.isEnabled = self.titleTextField.text != nil && !self.titleTextField.text!.isEmpty
+        if self.titleTextField.text?.isEmpty == false {
+            self.textFieldCheck = true
+            
+            if self.buttonsCheck {
+                self.saveReminderButton.isEnabled = true
+            }
+        } else {
+            self.textFieldCheck = false
+            self.saveReminderButton.isEnabled = false
+        }
     }
     
     @IBAction func selectedButtonsCheck(_ sender: Any) {
         for button in dayButtons {
             if button.isSelected {
-                saveReminderButton.isEnabled = true
+                self.buttonsCheck = true
+                
+                if self.textFieldCheck {
+                    self.saveReminderButton.isEnabled = true
+                }
+                
                 return
             }
         }
         
-        saveReminderButton.isEnabled = false
+        self.buttonsCheck = false
+        self.saveReminderButton.isEnabled = false
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -134,12 +148,13 @@ class AddReminderViewController: UIViewController {
         alertView.addButton(title) { (_) in
             if title != "Other" {
                 self.titleTextField.text = title
+                self.textFieldCheck = true
             } else {
                 self.titleTextField.text = ""
             }
             
             self.messageTextField.text = message
-            alertView.dismissWithDuration(self.ZAlerViewDismissDuration)
+            alertView.dismissWithDuration(0.2)
         }
     }
     
@@ -147,4 +162,6 @@ class AddReminderViewController: UIViewController {
     //        gestureRecognizer.numberOfTapsRequired = 2
     //
     //        self.view.addGestureRecognizer(gestureRecognizer)
+    //        self.saveReminderButton.isEnabled = self.titleTextField.text != nil && !self.titleTextField.text!.isEmpty
+
 }

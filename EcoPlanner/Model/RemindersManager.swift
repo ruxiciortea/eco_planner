@@ -8,12 +8,13 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 private let kReminderEntityName = "PersistentReminder"
 
-class RemindersController: NSObject {
+class RemindersManager: NSObject {
 
-    static let sharedInstance: RemindersController = RemindersController()
+    static let sharedInstance: RemindersManager = RemindersManager()
 
     private var remindersArray:[Reminder] = []
 
@@ -39,6 +40,8 @@ class RemindersController: NSObject {
         persistentReminder.time = [newReminder.time.hour, newReminder.time.minute]
         
         self.saveContext()
+        
+        self.scheduleNotification(forReminder: newReminder)
     }
     
     func editReminder(_ index: Int, withReminder newReminder: Reminder) {
@@ -130,12 +133,41 @@ class RemindersController: NSObject {
     
     func getNSFetchRequestWithPredicate(reminder: Reminder) -> NSFetchRequest<NSFetchRequestResult> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: kReminderEntityName)
-        fetchRequest.predicate = NSPredicate(format: "title == %@ AND message == %@ AND days == %@ time == %@",
+        fetchRequest.predicate = NSPredicate(format: "title == %@ AND message == %@ AND days == %@ AND time == %@",
                                              reminder.title,
                                              reminder.message ?? "",
                                              Reminder.convertWeekDaysToInts(weekDays: reminder.days),
                                              [reminder.time.hour, reminder.time.minute])
         
         return fetchRequest
+    }
+    
+    // MARK: - Notifications
+    
+    private func scheduleNotification(forReminder reminder: Reminder) {
+        let weekDays = Reminder.convertWeekDaysToInts(weekDays: reminder.days)
+        
+        for day in weekDays {
+            let content = UNMutableNotificationContent()
+            content.title = reminder.title
+            content.body = reminder.message ?? ""
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = reminder.time.hour
+            dateComponents.minute = reminder.time.minute
+            dateComponents.weekday = day
+            
+            // TODO: Check for weekdays and identifier
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            
+            let request = UNNotificationRequest(identifier: "Reminder", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print(error)
+                }
+            }
+        }
     }
 }

@@ -8,10 +8,9 @@
 
 import UIKit
 import ZAlertView
+import UserNotifications
 
 let kNavyBlueColor = UIColor(named: "NavyBlue")
-let kFadedBlueColor = UIColor(named: "FadedBlue")
-let kTextColor = UIColor(named: "TextColor")
 
 class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddReminderViewControllerDelegate {
  
@@ -29,6 +28,7 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         
         self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
         self.navigationController?.navigationBar.tintColor = .white
+        
     }
     
     // MARK: - Reminders TableView
@@ -40,12 +40,12 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return RemindersController.sharedInstance.getReminders().count
+        return RemindersManager.sharedInstance.getReminders().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuse")
-        let reminder = RemindersController.sharedInstance.getReminders()[indexPath.row]
+        let reminder = RemindersManager.sharedInstance.getReminders()[indexPath.row]
         
         cell.textLabel?.text = "\(formatateHour(number: reminder.time.hour)):\(formatateHour(number: reminder.time.minute))"
         cell.detailTextLabel?.text = "\(reminder.title)"
@@ -63,7 +63,7 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        RemindersController.sharedInstance.removeReminder(index: indexPath.row)
+        RemindersManager.sharedInstance.removeReminder(index: indexPath.row)
         
         tableView.beginUpdates()
         tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -73,7 +73,7 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: - Functions
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let segueDestination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddReminderViewController
+        let segueDestination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddOrEditReminderViewController
         
         guard segueDestination != nil else {
             return
@@ -82,15 +82,15 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         segueDestination?.delegate = self
         
         segueDestination?.reminderAddedBlock = { (reminder) in
-            RemindersController.sharedInstance.addReminder(newReminder: reminder)
+            RemindersManager.sharedInstance.addReminder(newReminder: reminder)
         }
         
         segueDestination?.reminderEditedBlock = { (reminder) in
-            RemindersController.sharedInstance.editReminder((self.selectedIndexPaht?.row)!, withReminder: reminder)
+            RemindersManager.sharedInstance.editReminder((self.selectedIndexPaht?.row)!, withReminder: reminder)
         }
         
         if segue.identifier == "EditReminderSegue" {
-            segueDestination?.reminder = RemindersController.sharedInstance.getReminders()[selectedIndexPaht!.row]
+            segueDestination?.reminder = RemindersManager.sharedInstance.getReminders()[selectedIndexPaht!.row]
         }
     }
     
