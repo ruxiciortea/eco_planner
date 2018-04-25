@@ -9,7 +9,8 @@
 import UIKit
 import ZAlertView
 
-protocol AddReminderViewControllerDelegate: class {
+protocol AddOrEditReminderViewControllerDelegate: class {
+    // did add song
 }
 
 class AddOrEditReminderViewController: UIViewController {
@@ -24,7 +25,7 @@ class AddOrEditReminderViewController: UIViewController {
     var reminderAddedBlock: ((Reminder) -> ())?
     var reminderEditedBlock: ((Reminder) -> ())?
         
-    var delegate: AddReminderViewControllerDelegate?
+    var delegate: AddOrEditReminderViewControllerDelegate?
     var reminder: Reminder?
     var daysArrayIndex: Int?
     var buttonsCheck = false
@@ -49,6 +50,8 @@ class AddOrEditReminderViewController: UIViewController {
             }
             
             self.saveReminderButton.isEnabled = true
+            self.buttonsCheck = true
+            self.textFieldCheck = true
         } else {
             let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
             

@@ -72,6 +72,16 @@ enum WeekDay: Int {
             return "S"
         }
     }
+    
+    func weekdayForDateComponents() -> Int {
+        let number = self.rawValue + 1
+        
+        if number == 8 {
+            return 1
+        }
+        
+        return number
+    }
 }
 
 class Reminder: NSObject {
@@ -95,7 +105,5 @@ class Reminder: NSObject {
         self.message = message
         self.days = days
         self.time = time
-    }
-    
-    
+    }   
 }

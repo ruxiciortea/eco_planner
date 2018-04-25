@@ -1,0 +1,6 @@
+framework module Pods_EcoPlanner {
+  umbrella header "Pods-EcoPlanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

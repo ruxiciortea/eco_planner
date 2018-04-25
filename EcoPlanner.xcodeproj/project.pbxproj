@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		508A7630FD925A04AAB791B3 /* Pods_EcoPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A290510AD6D0C5BD220DA00 /* Pods_EcoPlanner.framework */; };
 		C9E5B79C411E8D6B6C39286B /* Pods_eco_planner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */; };
 		CE5784D420530435008525D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5784D320530435008525D0 /* AppDelegate.swift */; };
 		CE5784D620530441008525D0 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5784D520530441008525D0 /* UIKitExtensions.swift */; };
@@ -25,7 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082CC35C68C20428D47231BB /* Pods-EcoPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		2DB39C7F66D23D960B79F37D /* Pods-EcoPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eco_planner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A290510AD6D0C5BD220DA00 /* Pods_EcoPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eco_planner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner.debug.xcconfig"; sourceTree = "<group>"; };
 		CE005F9C2020F57300DC0DAF /* EcoPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5784D320530435008525D0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E5B79C411E8D6B6C39286B /* Pods_eco_planner.framework in Frameworks */,
+				508A7630FD925A04AAB791B3 /* Pods_EcoPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				84B435EACE68A3EABD7C3349 /* Pods_eco_planner.framework */,
+				8A290510AD6D0C5BD220DA00 /* Pods_EcoPlanner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -70,6 +76,8 @@
 			children = (
 				8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */,
 				FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */,
+				2DB39C7F66D23D960B79F37D /* Pods-EcoPlanner.debug.xcconfig */,
+				082CC35C68C20428D47231BB /* Pods-EcoPlanner.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -232,7 +240,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eco_planner-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcoPlanner-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -245,16 +253,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner-frameworks.sh",
+				"${PODS_ROOT}/ScoutMaps-iOS-SDK/SKMaps.framework",
 				"${BUILT_PRODUCTS_DIR}/ZAlertView/ZAlertView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKMaps.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZAlertView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		72C2DD3D2ED0D857AC623117 /* [CP] Copy Pods Resources */ = {
@@ -263,13 +273,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner-resources.sh",
+				"${PODS_ROOT}/ScoutMaps-iOS-SDK/SKMaps.bundle",
+				"${PODS_ROOT}/ScoutMaps-iOS-SDK/SKAdvisorResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SKMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SKAdvisorResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -404,15 +419,15 @@
 		};
 		CE005FB22020F57300DC0DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B073FEF186309D7DA18071F /* Pods-eco_planner.debug.xcconfig */;
+			baseConfigurationReference = 2DB39C7F66D23D960B79F37D /* Pods-EcoPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z4NZC2AMSY;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPlanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruxiciortea.ecoplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -422,15 +437,15 @@
 		};
 		CE005FB32020F57300DC0DAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */;
+			baseConfigurationReference = 082CC35C68C20428D47231BB /* Pods-EcoPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z4NZC2AMSY;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPlanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ITBrainiacs.eco-planner";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruxiciortea.ecoplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

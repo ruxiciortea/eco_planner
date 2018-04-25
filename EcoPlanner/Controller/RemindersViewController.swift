@@ -12,7 +12,7 @@ import UserNotifications
 
 let kNavyBlueColor = UIColor(named: "NavyBlue")
 
-class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddReminderViewControllerDelegate {
+class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddOrEditReminderViewControllerDelegate {
  
     @IBOutlet weak var remindersTableView: UITableView!
     
@@ -70,7 +70,7 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.endUpdates()
     }
     
-    // MARK: - Functions
+    // MARK: - Segue
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let segueDestination = (segue.destination as? UINavigationController)?.viewControllers.first as? AddOrEditReminderViewController
@@ -93,6 +93,8 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
             segueDestination?.reminder = RemindersManager.sharedInstance.getReminders()[selectedIndexPaht!.row]
         }
     }
+    
+    // MARK: - Functions
     
     func formatateHour(number: Int) -> String {
         if number < 10 {

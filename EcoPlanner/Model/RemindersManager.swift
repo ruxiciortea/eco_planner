@@ -34,10 +34,7 @@ class RemindersManager: NSObject {
         remindersArray.append(newReminder)
         
         let persistentReminder = PersistentReminder(context: self.persistentContainer.viewContext)
-        persistentReminder.title = newReminder.title
-        persistentReminder.message = newReminder.message
-        persistentReminder.days = Reminder.convertWeekDaysToInts(weekDays: newReminder.days)
-        persistentReminder.time = [newReminder.time.hour, newReminder.time.minute]
+        self.assignPersistentReminer(to: persistentReminder, from: newReminder)
         
         self.saveContext()
         
@@ -51,19 +48,20 @@ class RemindersManager: NSObject {
         
         let reminder = self.remindersArray[index]
         
-        let fetchRequest = getNSFetchRequestWithPredicate(reminder: reminder)
+        let fetchRequest = self.getNSFetchRequestWithPredicate(reminder: reminder)
         
         do {
             if let result = (try self.persistentContainer.viewContext.fetch(fetchRequest) as! [PersistentReminder]).first {
-                result.title = newReminder.title
-                result.message = newReminder.message
-                result.days = Reminder.convertWeekDaysToInts(weekDays: newReminder.days)
-                result.time = [newReminder.time.hour, newReminder.time.minute]
+                self.assignPersistentReminer(to: result, from: reminder)
                 
                 self.saveContext()
             }
         } catch {
         }
+        
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(reminder.title)\(reminder.days)\(reminder.time.hour)\(reminder.time.minute)\((reminder.message) ?? "")"])
+        self.scheduleNotification(forReminder: newReminder)
+
         
         reminder.title = newReminder.title
         reminder.message = newReminder.message
@@ -78,7 +76,7 @@ class RemindersManager: NSObject {
         
         let reminder = self.remindersArray[index]
         
-        let fetchRequest = getNSFetchRequestWithPredicate(reminder: reminder)
+        let fetchRequest = self.getNSFetchRequestWithPredicate(reminder: reminder)
         
         do {
             if let result = (try self.persistentContainer.viewContext.fetch(fetchRequest) as! [PersistentReminder]).first {
@@ -87,6 +85,8 @@ class RemindersManager: NSObject {
             }
         } catch {
         }
+        
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(reminder.title)\(reminder.days)\(reminder.time.hour)\(reminder.time.minute)\((reminder.message) ?? "")"])
         
         remindersArray.remove(at: index)
     }
@@ -128,6 +128,32 @@ class RemindersManager: NSObject {
             print("Fetch failed")
         }
     }
+
+    // MARK: - Notifications
+    
+    private func scheduleNotification(forReminder reminder: Reminder) {
+        for day in reminder.days {
+            let content = UNMutableNotificationContent()
+            content.title = reminder.title
+            content.body = reminder.message ?? ""
+            content.sound = UNNotificationSound.default()
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = reminder.time.hour
+            dateComponents.minute = reminder.time.minute
+            dateComponents.weekday = day.weekdayForDateComponents()
+                        
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            
+            let request = UNNotificationRequest(identifier: "\(reminder.title)\(reminder.days)\(reminder.time.hour)\(reminder.time.minute)\((reminder.message) ?? "")", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print(error)
+                }
+            }
+        }
+    }
     
     // MARK: - Functions
     
@@ -142,32 +168,10 @@ class RemindersManager: NSObject {
         return fetchRequest
     }
     
-    // MARK: - Notifications
-    
-    private func scheduleNotification(forReminder reminder: Reminder) {
-        let weekDays = Reminder.convertWeekDaysToInts(weekDays: reminder.days)
-        
-        for day in weekDays {
-            let content = UNMutableNotificationContent()
-            content.title = reminder.title
-            content.body = reminder.message ?? ""
-            
-            var dateComponents = DateComponents()
-            dateComponents.hour = reminder.time.hour
-            dateComponents.minute = reminder.time.minute
-            dateComponents.weekday = day
-            
-            // TODO: Check for weekdays and identifier
-            
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-            
-            let request = UNNotificationRequest(identifier: "Reminder", content: content, trigger: trigger)
-            
-            UNUserNotificationCenter.current().add(request) { (error) in
-                if let error = error {
-                    print(error)
-                }
-            }
-        }
+    func assignPersistentReminer(to persistentReminder: PersistentReminder, from newReminder: Reminder) {
+        persistentReminder.title = newReminder.title
+        persistentReminder.message = newReminder.message
+        persistentReminder.days = Reminder.convertWeekDaysToInts(weekDays: newReminder.days)
+        persistentReminder.time = [newReminder.time.hour, newReminder.time.minute]
     }
 }

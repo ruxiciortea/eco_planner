@@ -7,114 +7,195 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40ACD975F82ED6F613608CE6C05BF978 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		536E691DF1EFF31B55DEBAB166662D54 /* ZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C035D8F4A7D20EEC8EC88897385C27 /* ZAlertView.swift */; };
-		628B3F6E4D409D60A5A1C2850C4B4634 /* ZAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE828B51B269DE6ABD29A3A03FBB211 /* ZAlertView-dummy.m */; };
-		81A43A3D492300BA72B40BC98E855183 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB731FA5411B5ECFDBA2626BA61DDDA5 /* UIImage.swift */; };
-		9EEF5CBD104E76B52D117C0C0A441DF2 /* Pods-eco_planner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 680066AB409669B87E2FBE26E1BF830F /* Pods-eco_planner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3DAFCF5C459CB32A555AC9AB12B88EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BE8007C7BB16FA29191B7AC350576DF3 /* Pods-eco_planner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC975E3AC74C7731874CE6EE07690C /* Pods-eco_planner-dummy.m */; };
-		CABF7A699357062D74FADD2F35DD4B1D /* ZAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E442B8830D9CD4D7F59656D058CE11 /* ZAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB441BD4EFBA0BDF5FD364D2D4D41E74 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655C82FE62479C6FD2E343941AD2FD3 /* UIColor.swift */; };
+		40FDEC96E69C14929ED43F46EEB3ABDA /* Pods-EcoPlanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5967CD0F0CB774EDF15C77012F31831C /* Pods-EcoPlanner-dummy.m */; };
+		65685F6DB38E90C029EB0382D388F45A /* ZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29801B942213871BD2A0F04B30658F9D /* ZAlertView.swift */; };
+		69E5FFC5620380B80AF3FA233009F826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8ABDCE4A85E20CFB0C659B0E2FD336B0 /* Pods-EcoPlanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D6ED86F8745AF065CF1E1E52B3D592F /* Pods-EcoPlanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		933B9EB2DCF98E5A2B9BBFBBE63AB14F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695EA693F4B49013C6C477E379F0BAD /* UIImage.swift */; };
+		CB3D1E38B1E10E7091F03A822654643B /* ZAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 778D7B051F7CB5025B9FB9E6595BDD51 /* ZAlertView-dummy.m */; };
+		CD640CB5256FD486A80F79FB2E7724E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D51EC44DE3754ECE442C59958B70401E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DF4777DBEC253ABB358C3A256B88A /* UIColor.swift */; };
+		D5E8CD67C03CD1D487FFA9208D94AE8A /* ZAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 464274714D43BC969E68F926E2788C82 /* ZAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CEBDFAC6EE899EABE18E7543AEB821DF /* PBXContainerItemProxy */ = {
+		93D1007F24B61CA849CC59A8BD41FBFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BABA56B416F302E3D40885D64B1E66BC;
+			remoteGlobalIDString = 181C13A6DD6B2BEC6C07EDC3EF54E52B;
 			remoteInfo = ZAlertView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0ABA4B0E324DDCDF40F25975E1181C2E /* ZAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZAlertView.framework; path = ZAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1655C82FE62479C6FD2E343941AD2FD3 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Pod/Classes/UIColor.swift; sourceTree = "<group>"; };
-		2132D56AF74D7DEC018CBAA66C799114 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F865F27C97D175E4F1F927A29788218 /* ZAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZAlertView.modulemap; sourceTree = "<group>"; };
-		56FE12D57F8B1FF29033B0C850A3E55D /* ZAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZAlertView.xcconfig; sourceTree = "<group>"; };
-		5DCB0313BA0B3860643B28A4F1035B53 /* ZAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZAlertView-prefix.pch"; sourceTree = "<group>"; };
+		00AE22367E0C2065667FA0311C3C15ED /* Pods-EcoPlanner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EcoPlanner-frameworks.sh"; sourceTree = "<group>"; };
+		076CF9F8F006A0890ECC42ADB4621492 /* SKAdvisorResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = SKAdvisorResources.bundle; sourceTree = "<group>"; };
+		0896202194CAE1FF1A2AB436F8396346 /* SKCameraSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCameraSettings.h; path = SKMaps.framework/Headers/SKCameraSettings.h; sourceTree = "<group>"; };
+		09681D1B086A8410BDD146F825C56AC4 /* Pods_EcoPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EcoPlanner.framework; path = "Pods-EcoPlanner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F0F79D325B161A7C5BD4687B5A963CA /* Pods-EcoPlanner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EcoPlanner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1024EED7CDA7EC331CA3A63F363B3321 /* ZAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZAlertView-prefix.pch"; sourceTree = "<group>"; };
+		125AA9D6DE632AE0EF71BA072FB8A872 /* SKSearchResultParent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKSearchResultParent.h; path = SKMaps.framework/Headers/SKSearchResultParent.h; sourceTree = "<group>"; };
+		13BEC6B76D91D26F1FDF8B02089C896E /* SKDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKDefinitions.h; path = SKMaps.framework/Headers/SKDefinitions.h; sourceTree = "<group>"; };
+		17754BF4A06AF5A35AFACFFAB35E11C4 /* SKSearchService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKSearchService.h; path = SKMaps.framework/Headers/SKSearchService.h; sourceTree = "<group>"; };
+		1A07E8FF7338928E3FA612D3D2A6D055 /* SKMultiStepSearchSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMultiStepSearchSettings.h; path = SKMaps.framework/Headers/SKMultiStepSearchSettings.h; sourceTree = "<group>"; };
+		1DD5548BFB3008A441799784D4AD4CF1 /* SKRouteState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRouteState.h; path = SKMaps.framework/Headers/SKRouteState.h; sourceTree = "<group>"; };
+		1E5CD01B8AFDB9DA61E727CD918D627A /* SKMapViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapViewDelegate.h; path = SKMaps.framework/Headers/SKMapViewDelegate.h; sourceTree = "<group>"; };
+		210493B5BB58AADE7572762DA2369A82 /* SKGPSFilesService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKGPSFilesService.h; path = SKMaps.framework/Headers/SKGPSFilesService.h; sourceTree = "<group>"; };
+		218116CB2644EC575FFC79E8FBA41E5C /* SKViaPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKViaPoint.h; path = SKMaps.framework/Headers/SKViaPoint.h; sourceTree = "<group>"; };
+		25B55C40D1DF501320CC8FBA1EAF6B2F /* SKMapsVersioningManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapsVersioningManager.h; path = SKMaps.framework/Headers/SKMapsVersioningManager.h; sourceTree = "<group>"; };
+		29801B942213871BD2A0F04B30658F9D /* ZAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAlertView.swift; path = Pod/Classes/ZAlertView.swift; sourceTree = "<group>"; };
+		2BF4676FC1C0F03AF72DD01025B8347F /* SKRoutingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRoutingDelegate.h; path = SKMaps.framework/Headers/SKRoutingDelegate.h; sourceTree = "<group>"; };
+		2E51A96BC441C7452B00BDEF116E6D37 /* SKMapCustomPOI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapCustomPOI.h; path = SKMaps.framework/Headers/SKMapCustomPOI.h; sourceTree = "<group>"; };
+		2EC024B352D037909E9BAA6698D3FEA8 /* SKMapView+RealReach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKMapView+RealReach.h"; path = "SKMaps.framework/Headers/SKMapView+RealReach.h"; sourceTree = "<group>"; };
+		37F732006AF62EFBB411993E793E7444 /* SKAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKAnnotationView.h; path = SKMaps.framework/Headers/SKAnnotationView.h; sourceTree = "<group>"; };
+		3958F60E34E3768340BF1B2D6C601EFF /* Pods-EcoPlanner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EcoPlanner-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E4908D8FB5CF62641D853FE0B284DC7 /* SKMapView+Style.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKMapView+Style.h"; path = "SKMaps.framework/Headers/SKMapView+Style.h"; sourceTree = "<group>"; };
+		4006F3363A825E20B6ABF62DF944DD4F /* SKRoutingService+GPSFiles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKRoutingService+GPSFiles.h"; path = "SKMaps.framework/Headers/SKRoutingService+GPSFiles.h"; sourceTree = "<group>"; };
+		40802C949ED77D7874C87F2CD4A717DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		464274714D43BC969E68F926E2788C82 /* ZAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZAlertView-umbrella.h"; sourceTree = "<group>"; };
+		4CC2021DDDEECBDBD2A9B69560E20D95 /* SKRouteSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRouteSettings.h; path = SKMaps.framework/Headers/SKRouteSettings.h; sourceTree = "<group>"; };
+		4F21A118BFF3AE291C8BF0CD1DC80B4B /* SKOfflinePackagesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKOfflinePackagesManager.h; path = SKMaps.framework/Headers/SKOfflinePackagesManager.h; sourceTree = "<group>"; };
+		517329E52687C9C60B9B900A4BA0432F /* SKOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKOverlay.h; path = SKMaps.framework/Headers/SKOverlay.h; sourceTree = "<group>"; };
+		52751E4A80BE94A3852C4A2FA58AB59B /* SKTilesCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTilesCacheManager.h; path = SKMaps.framework/Headers/SKTilesCacheManager.h; sourceTree = "<group>"; };
+		55AC7863FC8D6D235E9C64282A3A292D /* SKMapsInitSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapsInitSettings.h; path = SKMaps.framework/Headers/SKMapsInitSettings.h; sourceTree = "<group>"; };
+		56494A7DA98EBA38ABBAD1C74CBBC5C1 /* SKOneLineSearchSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKOneLineSearchSettings.h; path = SKMaps.framework/Headers/SKOneLineSearchSettings.h; sourceTree = "<group>"; };
+		56965966707521E67E650144E0B1E876 /* SKAdvisorTTSSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKAdvisorTTSSettings.h; path = SKMaps.framework/Headers/SKAdvisorTTSSettings.h; sourceTree = "<group>"; };
+		5967CD0F0CB774EDF15C77012F31831C /* Pods-EcoPlanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EcoPlanner-dummy.m"; sourceTree = "<group>"; };
+		5F90675A7F1A538D3B5A11E131C531DA /* SKTrackablePOIRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTrackablePOIRule.h; path = SKMaps.framework/Headers/SKTrackablePOIRule.h; sourceTree = "<group>"; };
+		5F9D1FA72B6A64871E6A624CD45F8B4F /* SKCalloutViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCalloutViewDelegate.h; path = SKMaps.framework/Headers/SKCalloutViewDelegate.h; sourceTree = "<group>"; };
+		63B9FC9E750977D17E975537422B0271 /* SKRouteInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRouteInformation.h; path = SKMaps.framework/Headers/SKRouteInformation.h; sourceTree = "<group>"; };
+		651B39A6F52E7C721CA68E398B586D4B /* SKMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = SKMaps.bundle; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67E442B8830D9CD4D7F59656D058CE11 /* ZAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZAlertView-umbrella.h"; sourceTree = "<group>"; };
-		680066AB409669B87E2FBE26E1BF830F /* Pods-eco_planner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eco_planner-umbrella.h"; sourceTree = "<group>"; };
-		6CC8A0A7087866047EBA9F857669DBE7 /* Pods-eco_planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eco_planner.release.xcconfig"; sourceTree = "<group>"; };
-		72C035D8F4A7D20EEC8EC88897385C27 /* ZAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAlertView.swift; path = Pod/Classes/ZAlertView.swift; sourceTree = "<group>"; };
-		72FFF17C6ED54EE7177E5DDB2C97D351 /* Pods-eco_planner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-eco_planner-acknowledgements.plist"; sourceTree = "<group>"; };
-		8249CA33050DD24D36D2FC525F07CFEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6995F2D0FBA1B422853E716D08B2752E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C436EF8498911AB97BACA873EB6ABF5 /* SKMapsService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapsService.h; path = SKMaps.framework/Headers/SKMapsService.h; sourceTree = "<group>"; };
+		6C54DD9436BDFB1E5EBBCA57091FC829 /* SKRouteAdvice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRouteAdvice.h; path = SKMaps.framework/Headers/SKRouteAdvice.h; sourceTree = "<group>"; };
+		71E039A8427756348905007EA1D25002 /* Pods-EcoPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EcoPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		735BAB39CD10E9F4DA63D35FCA51FED2 /* SKMapPackage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapPackage.h; path = SKMaps.framework/Headers/SKMapPackage.h; sourceTree = "<group>"; };
+		745651BA0594F58E64302681C11760FB /* SKMapPackageDownloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapPackageDownloadInfo.h; path = SKMaps.framework/Headers/SKMapPackageDownloadInfo.h; sourceTree = "<group>"; };
+		7623E978A3E30C17FBD63DBFA46E3245 /* ZAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZAlertView.framework; path = ZAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		774923E2CDB761613F536046496EC9D5 /* SKVersionInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKVersionInformation.h; path = SKMaps.framework/Headers/SKVersionInformation.h; sourceTree = "<group>"; };
+		778D7B051F7CB5025B9FB9E6595BDD51 /* ZAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZAlertView-dummy.m"; sourceTree = "<group>"; };
+		7797882B9A8949013F5634E557D0EF1F /* Pods-EcoPlanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EcoPlanner.modulemap"; sourceTree = "<group>"; };
+		78C03631E44693D5E8D258865A1BB1EE /* Pods-EcoPlanner-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EcoPlanner-resources.sh"; sourceTree = "<group>"; };
+		79C95CAEE3BAA29912AB1BA2388F4562 /* Pods-EcoPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EcoPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		7CFD42E7FED2ED5EEAF5825BBFB72B04 /* SKPOITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPOITracker.h; path = SKMaps.framework/Headers/SKPOITracker.h; sourceTree = "<group>"; };
+		822DF4777DBEC253ABB358C3A256B88A /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Pod/Classes/UIColor.swift; sourceTree = "<group>"; };
+		82B0FA9A3583840FA466423369BBA9EF /* SKNavigationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKNavigationDelegate.h; path = SKMaps.framework/Headers/SKNavigationDelegate.h; sourceTree = "<group>"; };
+		82CB141FE536D2BEEC058E2919AD72A5 /* SKReverseGeocoderService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKReverseGeocoderService.h; path = SKMaps.framework/Headers/SKReverseGeocoderService.h; sourceTree = "<group>"; };
+		83060321F2692113E453B36B77F72A30 /* SKMapView+HeatMaps.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKMapView+HeatMaps.h"; path = "SKMaps.framework/Headers/SKMapView+HeatMaps.h"; sourceTree = "<group>"; };
+		86B25D0D704B5C230047FB51E561A60F /* SKZoomLevelConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKZoomLevelConfiguration.h; path = SKMaps.framework/Headers/SKZoomLevelConfiguration.h; sourceTree = "<group>"; };
+		882E87F4CFA6B2C4E6EC2C1684597708 /* SKNearbySearchSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKNearbySearchSettings.h; path = SKMaps.framework/Headers/SKNearbySearchSettings.h; sourceTree = "<group>"; };
+		8D6ED86F8745AF065CF1E1E52B3D592F /* Pods-EcoPlanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EcoPlanner-umbrella.h"; sourceTree = "<group>"; };
+		90EEFD985B18889786E94C891A47A0D3 /* SKCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCircle.h; path = SKMaps.framework/Headers/SKCircle.h; sourceTree = "<group>"; };
+		92406E8C4E765FEB5F6D08849A86AB59 /* SKPositionerServiceDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPositionerServiceDelegate.h; path = SKMaps.framework/Headers/SKPositionerServiceDelegate.h; sourceTree = "<group>"; };
+		9255647953885F1208465EC631A3226B /* SKPositionerService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPositionerService.h; path = SKMaps.framework/Headers/SKPositionerService.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96FC975E3AC74C7731874CE6EE07690C /* Pods-eco_planner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eco_planner-dummy.m"; sourceTree = "<group>"; };
-		99A5BC52A1C56B08E4126BDA5F6E469E /* Pods-eco_planner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eco_planner.debug.xcconfig"; sourceTree = "<group>"; };
-		AAE828B51B269DE6ABD29A3A03FBB211 /* ZAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZAlertView-dummy.m"; sourceTree = "<group>"; };
-		C9B78B33E88E74E6BB2113965C0A6C31 /* Pods-eco_planner-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-eco_planner-resources.sh"; sourceTree = "<group>"; };
-		D1F45E293A9F9490F9AF93ACCCC39310 /* Pods-eco_planner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-eco_planner-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D80DF367975D1D763AAD5E908A6F73C3 /* Pods-eco_planner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-eco_planner-frameworks.sh"; sourceTree = "<group>"; };
-		D8583F3F1F7C8F9E819FC6ECE4632A4C /* Pods_eco_planner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_eco_planner.framework; path = "Pods-eco_planner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F08D472BB542F2D8C438BB019E5DAE82 /* Pods-eco_planner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-eco_planner.modulemap"; sourceTree = "<group>"; };
-		FB731FA5411B5ECFDBA2626BA61DDDA5 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Pod/Classes/UIImage.swift; sourceTree = "<group>"; };
+		9695EA693F4B49013C6C477E379F0BAD /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Pod/Classes/UIImage.swift; sourceTree = "<group>"; };
+		97B3D57ECBC5A592E472A36CD6730D66 /* SKMapView+Overlays.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKMapView+Overlays.h"; path = "SKMaps.framework/Headers/SKMapView+Overlays.h"; sourceTree = "<group>"; };
+		9828969E4F930FD5713ADF0D087167C2 /* SKMapInternationalizationSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapInternationalizationSettings.h; path = SKMaps.framework/Headers/SKMapInternationalizationSettings.h; sourceTree = "<group>"; };
+		993A0A2BD0DECC6FA2A7E3715E72B38D /* SKCalloutView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCalloutView.h; path = SKMaps.framework/Headers/SKCalloutView.h; sourceTree = "<group>"; };
+		A0670E2190D812C5461D12CC2A42D95C /* ZAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZAlertView.xcconfig; sourceTree = "<group>"; };
+		A09B9E1F764F10CB7F11E1F06F0146D6 /* SKSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKSearch.h; path = SKMaps.framework/Headers/SKSearch.h; sourceTree = "<group>"; };
+		A4D499D9E9AEDB2859C58835A3BBF144 /* SKTrackablePOI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTrackablePOI.h; path = SKMaps.framework/Headers/SKTrackablePOI.h; sourceTree = "<group>"; };
+		A7BEF4BDBCAB4B310A772FDAB05BC0C9 /* SKGPSFileElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKGPSFileElement.h; path = SKMaps.framework/Headers/SKGPSFileElement.h; sourceTree = "<group>"; };
+		A96EE76015585994E18DE9C097365B2E /* SKAdvisorSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKAdvisorSettings.h; path = SKMaps.framework/Headers/SKAdvisorSettings.h; sourceTree = "<group>"; };
+		AABBD8A0DE31EEE60EEA0AAF7912CE30 /* SKNavigationSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKNavigationSettings.h; path = SKMaps.framework/Headers/SKNavigationSettings.h; sourceTree = "<group>"; };
+		AC5F1FB5A13984F09C8E7455EC81A0D9 /* SKCoordinate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCoordinate.h; path = SKMaps.framework/Headers/SKCoordinate.h; sourceTree = "<group>"; };
+		B0B7BFA64C193C286D109EF66B0E08C4 /* SKMapSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapSettings.h; path = SKMaps.framework/Headers/SKMapSettings.h; sourceTree = "<group>"; };
+		B4CE3BBA08DD3B3C97E51B830791D03C /* SKPositionsLoggingService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPositionsLoggingService.h; path = SKMaps.framework/Headers/SKPositionsLoggingService.h; sourceTree = "<group>"; };
+		B529F999FD51FC692217BD2EEBCF2BB2 /* SKCurrentPositionAnimationSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCurrentPositionAnimationSettings.h; path = SKMaps.framework/Headers/SKCurrentPositionAnimationSettings.h; sourceTree = "<group>"; };
+		BA29EE242C1E454BB1009F781132C553 /* SKMapVersioningDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapVersioningDelegate.h; path = SKMaps.framework/Headers/SKMapVersioningDelegate.h; sourceTree = "<group>"; };
+		BAE1A267346FF80EFD67F20B9E0BFBE9 /* SKMapPOI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapPOI.h; path = SKMaps.framework/Headers/SKMapPOI.h; sourceTree = "<group>"; };
+		BB26D49E475C58F40132482AE4501978 /* SKAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKAnnotation.h; path = SKMaps.framework/Headers/SKAnnotation.h; sourceTree = "<group>"; };
+		BB928EB9DE608D23733ACD6AC55CC621 /* SKTrailSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTrailSettings.h; path = SKMaps.framework/Headers/SKTrailSettings.h; sourceTree = "<group>"; };
+		BD2F4648D8AA4B42DB07FA7227B3C876 /* SKPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPolyline.h; path = SKMaps.framework/Headers/SKPolyline.h; sourceTree = "<group>"; };
+		BEAD97C53C404E5AC5C7891FCF0AE1DD /* SKRoutingService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRoutingService.h; path = SKMaps.framework/Headers/SKRoutingService.h; sourceTree = "<group>"; };
+		C5106B789EFB554C0D05F279CE4DEB47 /* SKMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapView.h; path = SKMaps.framework/Headers/SKMapView.h; sourceTree = "<group>"; };
+		C61A8A37FAFCC0F62612FEC8D1FE7357 /* SKBoundingBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKBoundingBox.h; path = SKMaps.framework/Headers/SKBoundingBox.h; sourceTree = "<group>"; };
+		CE56E6097E6574F09A1CBBE9F54AE147 /* SKRealReachSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRealReachSettings.h; path = SKMaps.framework/Headers/SKRealReachSettings.h; sourceTree = "<group>"; };
+		D042FF9845DDF0B3BA6885408397A965 /* SKProxySettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKProxySettings.h; path = SKMaps.framework/Headers/SKProxySettings.h; sourceTree = "<group>"; };
+		D2302E657581CE432E8B96365426E73B /* SKAnimationSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKAnimationSettings.h; path = SKMaps.framework/Headers/SKAnimationSettings.h; sourceTree = "<group>"; };
+		D4C24978BD70B7ADB399C6793880D5A3 /* SKMaps.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMaps.h; path = SKMaps.framework/Headers/SKMaps.h; sourceTree = "<group>"; };
+		DA2C6FB8FA01B2BDB08F7BDB5B04C10B /* SKVisualAdviceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKVisualAdviceConfiguration.h; path = SKMaps.framework/Headers/SKVisualAdviceConfiguration.h; sourceTree = "<group>"; };
+		DB69964F4AA26AD74F1704F546447383 /* SKDetectedPOI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKDetectedPOI.h; path = SKMaps.framework/Headers/SKDetectedPOI.h; sourceTree = "<group>"; };
+		DD5F016CE7B668AE3247D5D4B62F18FD /* SKMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SKMaps.framework; sourceTree = "<group>"; };
+		DDA1282D21E345577C3FDF9E437F7288 /* SKMapView+GPSFiles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKMapView+GPSFiles.h"; path = "SKMaps.framework/Headers/SKMapView+GPSFiles.h"; sourceTree = "<group>"; };
+		DEDD82E3DE6577AB74474A75E949D2D4 /* ZAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZAlertView.modulemap; sourceTree = "<group>"; };
+		DF6D35F8401F6459DC0D14828A816B63 /* SKMapViewStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapViewStyle.h; path = SKMaps.framework/Headers/SKMapViewStyle.h; sourceTree = "<group>"; };
+		E001D312AB6967C6CCCE27AA29430AF4 /* SKViaPointState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKViaPointState.h; path = SKMaps.framework/Headers/SKViaPointState.h; sourceTree = "<group>"; };
+		E24C546EEA145521AAB11BA54BAAA0D3 /* SKSearchServiceDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKSearchServiceDelegate.h; path = SKMaps.framework/Headers/SKSearchServiceDelegate.h; sourceTree = "<group>"; };
+		EF8F0AECB0FD5E70A60522AE6EEBE476 /* SKSearchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKSearchResult.h; path = SKMaps.framework/Headers/SKSearchResult.h; sourceTree = "<group>"; };
+		F1337DCFE8EA6B25D67ED2D05573F87F /* SKPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPolygon.h; path = SKMaps.framework/Headers/SKPolygon.h; sourceTree = "<group>"; };
+		F2F9E2D68EA56D2D9948DA683BC09DBF /* SKCrossingDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKCrossingDescriptor.h; path = SKMaps.framework/Headers/SKCrossingDescriptor.h; sourceTree = "<group>"; };
+		F5E9534E1DA8050F777CB76055258420 /* SKTTSPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTTSPlayer.h; path = SKMaps.framework/Headers/SKTTSPlayer.h; sourceTree = "<group>"; };
+		FD2865D2FDA1CBFB810E590C35C0B638 /* SKMapScaleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapScaleView.h; path = SKMaps.framework/Headers/SKMapScaleView.h; sourceTree = "<group>"; };
+		FDFE882915B554778190FE1126DD4935 /* SKRouteAlternativeSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKRouteAlternativeSettings.h; path = SKMaps.framework/Headers/SKRouteAlternativeSettings.h; sourceTree = "<group>"; };
+		FF7B0FB35498AF292BCA8D940D90D08A /* SKPOICluster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKPOICluster.h; path = SKMaps.framework/Headers/SKPOICluster.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE3467B1A9DE1A85622BB7CA8EC6E73D /* Frameworks */ = {
+		6AC5062E70BF750FCB95BB5FB1EADAB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40ACD975F82ED6F613608CE6C05BF978 /* Foundation.framework in Frameworks */,
+				CD640CB5256FD486A80F79FB2E7724E8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5C398DF3EABA006CD7572A7619C2E98 /* Frameworks */ = {
+		7D9EC1B025294D291ECEDF4EC1C7A769 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3DAFCF5C459CB32A555AC9AB12B88EA /* Foundation.framework in Frameworks */,
+				69E5FFC5620380B80AF3FA233009F826 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1734A80C1B7AA8B7BCC7DD2F86BBD91A /* Pods */ = {
+		10090D55B8A0A0D4CC5C0231BA631212 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76E34AD91E246CF3E2AC417092AFA509 /* ZAlertView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		42D387F8F303647E42CC2AEF8156D02D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2132D56AF74D7DEC018CBAA66C799114 /* Info.plist */,
-				3F865F27C97D175E4F1F927A29788218 /* ZAlertView.modulemap */,
-				56FE12D57F8B1FF29033B0C850A3E55D /* ZAlertView.xcconfig */,
-				AAE828B51B269DE6ABD29A3A03FBB211 /* ZAlertView-dummy.m */,
-				5DCB0313BA0B3860643B28A4F1035B53 /* ZAlertView-prefix.pch */,
-				67E442B8830D9CD4D7F59656D058CE11 /* ZAlertView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ZAlertView";
-			sourceTree = "<group>";
-		};
-		5CC74B872084953049F39024439EF9A5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D8583F3F1F7C8F9E819FC6ECE4632A4C /* Pods_eco_planner.framework */,
-				0ABA4B0E324DDCDF40F25975E1181C2E /* ZAlertView.framework */,
+				09681D1B086A8410BDD146F825C56AC4 /* Pods_EcoPlanner.framework */,
+				7623E978A3E30C17FBD63DBFA46E3245 /* ZAlertView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76E34AD91E246CF3E2AC417092AFA509 /* ZAlertView */ = {
+		3E4B3A8426CED1BB0EA564428EE017E3 /* ZAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				1655C82FE62479C6FD2E343941AD2FD3 /* UIColor.swift */,
-				FB731FA5411B5ECFDBA2626BA61DDDA5 /* UIImage.swift */,
-				72C035D8F4A7D20EEC8EC88897385C27 /* ZAlertView.swift */,
-				42D387F8F303647E42CC2AEF8156D02D /* Support Files */,
+				822DF4777DBEC253ABB358C3A256B88A /* UIColor.swift */,
+				9695EA693F4B49013C6C477E379F0BAD /* UIImage.swift */,
+				29801B942213871BD2A0F04B30658F9D /* ZAlertView.swift */,
+				61A6042BC7785714C033EBC57149A333 /* Support Files */,
 			);
 			name = ZAlertView;
 			path = ZAlertView;
+			sourceTree = "<group>";
+		};
+		610C5E76560823FA1E028E4266AF8FCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9CDEE0DD6D1B6D7864FD441698530 /* ScoutMaps-iOS-SDK */,
+				3E4B3A8426CED1BB0EA564428EE017E3 /* ZAlertView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61A6042BC7785714C033EBC57149A333 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				40802C949ED77D7874C87F2CD4A717DA /* Info.plist */,
+				DEDD82E3DE6577AB74474A75E949D2D4 /* ZAlertView.modulemap */,
+				A0670E2190D812C5461D12CC2A42D95C /* ZAlertView.xcconfig */,
+				778D7B051F7CB5025B9FB9E6595BDD51 /* ZAlertView-dummy.m */,
+				1024EED7CDA7EC331CA3A63F363B3321 /* ZAlertView-prefix.pch */,
+				464274714D43BC969E68F926E2788C82 /* ZAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZAlertView";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -122,36 +203,97 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1734A80C1B7AA8B7BCC7DD2F86BBD91A /* Pods */,
-				5CC74B872084953049F39024439EF9A5 /* Products */,
-				8C29B1B1A4386D7DEEEFCC070F78A268 /* Targets Support Files */,
+				610C5E76560823FA1E028E4266AF8FCE /* Pods */,
+				10090D55B8A0A0D4CC5C0231BA631212 /* Products */,
+				C7C64ADDD4002A01CBCD00453BB41C15 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8C29B1B1A4386D7DEEEFCC070F78A268 /* Targets Support Files */ = {
+		B1A9CDEE0DD6D1B6D7864FD441698530 /* ScoutMaps-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				8E382466443692DF9E9F953D924998F0 /* Pods-eco_planner */,
+				A96EE76015585994E18DE9C097365B2E /* SKAdvisorSettings.h */,
+				56965966707521E67E650144E0B1E876 /* SKAdvisorTTSSettings.h */,
+				D2302E657581CE432E8B96365426E73B /* SKAnimationSettings.h */,
+				BB26D49E475C58F40132482AE4501978 /* SKAnnotation.h */,
+				37F732006AF62EFBB411993E793E7444 /* SKAnnotationView.h */,
+				C61A8A37FAFCC0F62612FEC8D1FE7357 /* SKBoundingBox.h */,
+				993A0A2BD0DECC6FA2A7E3715E72B38D /* SKCalloutView.h */,
+				5F9D1FA72B6A64871E6A624CD45F8B4F /* SKCalloutViewDelegate.h */,
+				0896202194CAE1FF1A2AB436F8396346 /* SKCameraSettings.h */,
+				90EEFD985B18889786E94C891A47A0D3 /* SKCircle.h */,
+				AC5F1FB5A13984F09C8E7455EC81A0D9 /* SKCoordinate.h */,
+				F2F9E2D68EA56D2D9948DA683BC09DBF /* SKCrossingDescriptor.h */,
+				B529F999FD51FC692217BD2EEBCF2BB2 /* SKCurrentPositionAnimationSettings.h */,
+				13BEC6B76D91D26F1FDF8B02089C896E /* SKDefinitions.h */,
+				DB69964F4AA26AD74F1704F546447383 /* SKDetectedPOI.h */,
+				A7BEF4BDBCAB4B310A772FDAB05BC0C9 /* SKGPSFileElement.h */,
+				210493B5BB58AADE7572762DA2369A82 /* SKGPSFilesService.h */,
+				2E51A96BC441C7452B00BDEF116E6D37 /* SKMapCustomPOI.h */,
+				9828969E4F930FD5713ADF0D087167C2 /* SKMapInternationalizationSettings.h */,
+				735BAB39CD10E9F4DA63D35FCA51FED2 /* SKMapPackage.h */,
+				745651BA0594F58E64302681C11760FB /* SKMapPackageDownloadInfo.h */,
+				BAE1A267346FF80EFD67F20B9E0BFBE9 /* SKMapPOI.h */,
+				D4C24978BD70B7ADB399C6793880D5A3 /* SKMaps.h */,
+				FD2865D2FDA1CBFB810E590C35C0B638 /* SKMapScaleView.h */,
+				B0B7BFA64C193C286D109EF66B0E08C4 /* SKMapSettings.h */,
+				55AC7863FC8D6D235E9C64282A3A292D /* SKMapsInitSettings.h */,
+				6C436EF8498911AB97BACA873EB6ABF5 /* SKMapsService.h */,
+				25B55C40D1DF501320CC8FBA1EAF6B2F /* SKMapsVersioningManager.h */,
+				BA29EE242C1E454BB1009F781132C553 /* SKMapVersioningDelegate.h */,
+				C5106B789EFB554C0D05F279CE4DEB47 /* SKMapView.h */,
+				DDA1282D21E345577C3FDF9E437F7288 /* SKMapView+GPSFiles.h */,
+				83060321F2692113E453B36B77F72A30 /* SKMapView+HeatMaps.h */,
+				97B3D57ECBC5A592E472A36CD6730D66 /* SKMapView+Overlays.h */,
+				2EC024B352D037909E9BAA6698D3FEA8 /* SKMapView+RealReach.h */,
+				3E4908D8FB5CF62641D853FE0B284DC7 /* SKMapView+Style.h */,
+				1E5CD01B8AFDB9DA61E727CD918D627A /* SKMapViewDelegate.h */,
+				DF6D35F8401F6459DC0D14828A816B63 /* SKMapViewStyle.h */,
+				1A07E8FF7338928E3FA612D3D2A6D055 /* SKMultiStepSearchSettings.h */,
+				82B0FA9A3583840FA466423369BBA9EF /* SKNavigationDelegate.h */,
+				AABBD8A0DE31EEE60EEA0AAF7912CE30 /* SKNavigationSettings.h */,
+				882E87F4CFA6B2C4E6EC2C1684597708 /* SKNearbySearchSettings.h */,
+				4F21A118BFF3AE291C8BF0CD1DC80B4B /* SKOfflinePackagesManager.h */,
+				56494A7DA98EBA38ABBAD1C74CBBC5C1 /* SKOneLineSearchSettings.h */,
+				517329E52687C9C60B9B900A4BA0432F /* SKOverlay.h */,
+				FF7B0FB35498AF292BCA8D940D90D08A /* SKPOICluster.h */,
+				7CFD42E7FED2ED5EEAF5825BBFB72B04 /* SKPOITracker.h */,
+				F1337DCFE8EA6B25D67ED2D05573F87F /* SKPolygon.h */,
+				BD2F4648D8AA4B42DB07FA7227B3C876 /* SKPolyline.h */,
+				9255647953885F1208465EC631A3226B /* SKPositionerService.h */,
+				92406E8C4E765FEB5F6D08849A86AB59 /* SKPositionerServiceDelegate.h */,
+				B4CE3BBA08DD3B3C97E51B830791D03C /* SKPositionsLoggingService.h */,
+				D042FF9845DDF0B3BA6885408397A965 /* SKProxySettings.h */,
+				CE56E6097E6574F09A1CBBE9F54AE147 /* SKRealReachSettings.h */,
+				82CB141FE536D2BEEC058E2919AD72A5 /* SKReverseGeocoderService.h */,
+				6C54DD9436BDFB1E5EBBCA57091FC829 /* SKRouteAdvice.h */,
+				FDFE882915B554778190FE1126DD4935 /* SKRouteAlternativeSettings.h */,
+				63B9FC9E750977D17E975537422B0271 /* SKRouteInformation.h */,
+				4CC2021DDDEECBDBD2A9B69560E20D95 /* SKRouteSettings.h */,
+				1DD5548BFB3008A441799784D4AD4CF1 /* SKRouteState.h */,
+				2BF4676FC1C0F03AF72DD01025B8347F /* SKRoutingDelegate.h */,
+				BEAD97C53C404E5AC5C7891FCF0AE1DD /* SKRoutingService.h */,
+				4006F3363A825E20B6ABF62DF944DD4F /* SKRoutingService+GPSFiles.h */,
+				A09B9E1F764F10CB7F11E1F06F0146D6 /* SKSearch.h */,
+				EF8F0AECB0FD5E70A60522AE6EEBE476 /* SKSearchResult.h */,
+				125AA9D6DE632AE0EF71BA072FB8A872 /* SKSearchResultParent.h */,
+				17754BF4A06AF5A35AFACFFAB35E11C4 /* SKSearchService.h */,
+				E24C546EEA145521AAB11BA54BAAA0D3 /* SKSearchServiceDelegate.h */,
+				52751E4A80BE94A3852C4A2FA58AB59B /* SKTilesCacheManager.h */,
+				A4D499D9E9AEDB2859C58835A3BBF144 /* SKTrackablePOI.h */,
+				5F90675A7F1A538D3B5A11E131C531DA /* SKTrackablePOIRule.h */,
+				BB928EB9DE608D23733ACD6AC55CC621 /* SKTrailSettings.h */,
+				F5E9534E1DA8050F777CB76055258420 /* SKTTSPlayer.h */,
+				774923E2CDB761613F536046496EC9D5 /* SKVersionInformation.h */,
+				218116CB2644EC575FFC79E8FBA41E5C /* SKViaPoint.h */,
+				E001D312AB6967C6CCCE27AA29430AF4 /* SKViaPointState.h */,
+				DA2C6FB8FA01B2BDB08F7BDB5B04C10B /* SKVisualAdviceConfiguration.h */,
+				86B25D0D704B5C230047FB51E561A60F /* SKZoomLevelConfiguration.h */,
+				BE11368EC793E5083D1B9DF525BAC70C /* Frameworks */,
+				F19989088643A89A141B70192B8C1CCE /* Resources */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		8E382466443692DF9E9F953D924998F0 /* Pods-eco_planner */ = {
-			isa = PBXGroup;
-			children = (
-				8249CA33050DD24D36D2FC525F07CFEB /* Info.plist */,
-				F08D472BB542F2D8C438BB019E5DAE82 /* Pods-eco_planner.modulemap */,
-				D1F45E293A9F9490F9AF93ACCCC39310 /* Pods-eco_planner-acknowledgements.markdown */,
-				72FFF17C6ED54EE7177E5DDB2C97D351 /* Pods-eco_planner-acknowledgements.plist */,
-				96FC975E3AC74C7731874CE6EE07690C /* Pods-eco_planner-dummy.m */,
-				D80DF367975D1D763AAD5E908A6F73C3 /* Pods-eco_planner-frameworks.sh */,
-				C9B78B33E88E74E6BB2113965C0A6C31 /* Pods-eco_planner-resources.sh */,
-				680066AB409669B87E2FBE26E1BF830F /* Pods-eco_planner-umbrella.h */,
-				99A5BC52A1C56B08E4126BDA5F6E469E /* Pods-eco_planner.debug.xcconfig */,
-				6CC8A0A7087866047EBA9F857669DBE7 /* Pods-eco_planner.release.xcconfig */,
-			);
-			name = "Pods-eco_planner";
-			path = "Target Support Files/Pods-eco_planner";
+			name = "ScoutMaps-iOS-SDK";
+			path = "ScoutMaps-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -162,6 +304,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE11368EC793E5083D1B9DF525BAC70C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD5F016CE7B668AE3247D5D4B62F18FD /* SKMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7C64ADDD4002A01CBCD00453BB41C15 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4DF728E118FB29C1F8FB3C02F7CDF97 /* Pods-EcoPlanner */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,53 +328,62 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		F19989088643A89A141B70192B8C1CCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				076CF9F8F006A0890ECC42ADB4621492 /* SKAdvisorResources.bundle */,
+				651B39A6F52E7C721CA68E398B586D4B /* SKMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F4DF728E118FB29C1F8FB3C02F7CDF97 /* Pods-EcoPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				6995F2D0FBA1B422853E716D08B2752E /* Info.plist */,
+				7797882B9A8949013F5634E557D0EF1F /* Pods-EcoPlanner.modulemap */,
+				0F0F79D325B161A7C5BD4687B5A963CA /* Pods-EcoPlanner-acknowledgements.markdown */,
+				3958F60E34E3768340BF1B2D6C601EFF /* Pods-EcoPlanner-acknowledgements.plist */,
+				5967CD0F0CB774EDF15C77012F31831C /* Pods-EcoPlanner-dummy.m */,
+				00AE22367E0C2065667FA0311C3C15ED /* Pods-EcoPlanner-frameworks.sh */,
+				78C03631E44693D5E8D258865A1BB1EE /* Pods-EcoPlanner-resources.sh */,
+				8D6ED86F8745AF065CF1E1E52B3D592F /* Pods-EcoPlanner-umbrella.h */,
+				71E039A8427756348905007EA1D25002 /* Pods-EcoPlanner.debug.xcconfig */,
+				79C95CAEE3BAA29912AB1BA2388F4562 /* Pods-EcoPlanner.release.xcconfig */,
+			);
+			name = "Pods-EcoPlanner";
+			path = "Target Support Files/Pods-EcoPlanner";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		96375FC486CD7A7B9C659DF923DF7548 /* Headers */ = {
+		0B1C19DDF93C700FFD3B3C230B66D2E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CABF7A699357062D74FADD2F35DD4B1D /* ZAlertView-umbrella.h in Headers */,
+				8ABDCE4A85E20CFB0C659B0E2FD336B0 /* Pods-EcoPlanner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0544892BD364B21CFAD6DA17C21A9FA /* Headers */ = {
+		FEEABB27E0D93F8AA97C0DAABC177ADA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EEF5CBD104E76B52D117C0C0A441DF2 /* Pods-eco_planner-umbrella.h in Headers */,
+				D5E8CD67C03CD1D487FFA9208D94AE8A /* ZAlertView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AEDA72BD483BF0D3E87AE127F95207C5 /* Pods-eco_planner */ = {
+		181C13A6DD6B2BEC6C07EDC3EF54E52B /* ZAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DF7EAEEBFB99F6E98E583C7893F0A7F /* Build configuration list for PBXNativeTarget "Pods-eco_planner" */;
+			buildConfigurationList = DFE118F8790334F347BE23D66721F087 /* Build configuration list for PBXNativeTarget "ZAlertView" */;
 			buildPhases = (
-				A3BB4DA17183712B5D07D7AD6695CBBD /* Sources */,
-				AE3467B1A9DE1A85622BB7CA8EC6E73D /* Frameworks */,
-				A0544892BD364B21CFAD6DA17C21A9FA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				927BA228D7FB8AAB5B3344DA5AFC8DD9 /* PBXTargetDependency */,
-			);
-			name = "Pods-eco_planner";
-			productName = "Pods-eco_planner";
-			productReference = D8583F3F1F7C8F9E819FC6ECE4632A4C /* Pods_eco_planner.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BABA56B416F302E3D40885D64B1E66BC /* ZAlertView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A06A0709DB384023F9FA5A2861480A3 /* Build configuration list for PBXNativeTarget "ZAlertView" */;
-			buildPhases = (
-				DBD695E8949C3280281C1B02132FD15B /* Sources */,
-				F5C398DF3EABA006CD7572A7619C2E98 /* Frameworks */,
-				96375FC486CD7A7B9C659DF923DF7548 /* Headers */,
+				4AAD709EE7CD3A5399D6446A0B944FD5 /* Sources */,
+				7D9EC1B025294D291ECEDF4EC1C7A769 /* Frameworks */,
+				FEEABB27E0D93F8AA97C0DAABC177ADA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -224,7 +391,25 @@
 			);
 			name = ZAlertView;
 			productName = ZAlertView;
-			productReference = 0ABA4B0E324DDCDF40F25975E1181C2E /* ZAlertView.framework */;
+			productReference = 7623E978A3E30C17FBD63DBFA46E3245 /* ZAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EE97CEE8CDB988B65FBF4E4D45ADB3A2 /* Pods-EcoPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07D67B1C4A1125241879972F65159A67 /* Build configuration list for PBXNativeTarget "Pods-EcoPlanner" */;
+			buildPhases = (
+				EB2F02007F1822CF3D38D13CF868DF88 /* Sources */,
+				6AC5062E70BF750FCB95BB5FB1EADAB8 /* Frameworks */,
+				0B1C19DDF93C700FFD3B3C230B66D2E5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D681BC786D1E740D591266FC834BF58 /* PBXTargetDependency */,
+			);
+			name = "Pods-EcoPlanner";
+			productName = "Pods-EcoPlanner";
+			productReference = 09681D1B086A8410BDD146F825C56AC4 /* Pods_EcoPlanner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -244,44 +429,44 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5CC74B872084953049F39024439EF9A5 /* Products */;
+			productRefGroup = 10090D55B8A0A0D4CC5C0231BA631212 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AEDA72BD483BF0D3E87AE127F95207C5 /* Pods-eco_planner */,
-				BABA56B416F302E3D40885D64B1E66BC /* ZAlertView */,
+				EE97CEE8CDB988B65FBF4E4D45ADB3A2 /* Pods-EcoPlanner */,
+				181C13A6DD6B2BEC6C07EDC3EF54E52B /* ZAlertView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A3BB4DA17183712B5D07D7AD6695CBBD /* Sources */ = {
+		4AAD709EE7CD3A5399D6446A0B944FD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE8007C7BB16FA29191B7AC350576DF3 /* Pods-eco_planner-dummy.m in Sources */,
+				D51EC44DE3754ECE442C59958B70401E /* UIColor.swift in Sources */,
+				933B9EB2DCF98E5A2B9BBFBBE63AB14F /* UIImage.swift in Sources */,
+				CB3D1E38B1E10E7091F03A822654643B /* ZAlertView-dummy.m in Sources */,
+				65685F6DB38E90C029EB0382D388F45A /* ZAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBD695E8949C3280281C1B02132FD15B /* Sources */ = {
+		EB2F02007F1822CF3D38D13CF868DF88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB441BD4EFBA0BDF5FD364D2D4D41E74 /* UIColor.swift in Sources */,
-				81A43A3D492300BA72B40BC98E855183 /* UIImage.swift in Sources */,
-				628B3F6E4D409D60A5A1C2850C4B4634 /* ZAlertView-dummy.m in Sources */,
-				536E691DF1EFF31B55DEBAB166662D54 /* ZAlertView.swift in Sources */,
+				40FDEC96E69C14929ED43F46EEB3ABDA /* Pods-EcoPlanner-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		927BA228D7FB8AAB5B3344DA5AFC8DD9 /* PBXTargetDependency */ = {
+		4D681BC786D1E740D591266FC834BF58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZAlertView;
-			target = BABA56B416F302E3D40885D64B1E66BC /* ZAlertView */;
-			targetProxy = CEBDFAC6EE899EABE18E7543AEB821DF /* PBXContainerItemProxy */;
+			target = 181C13A6DD6B2BEC6C07EDC3EF54E52B /* ZAlertView */;
+			targetProxy = 93D1007F24B61CA849CC59A8BD41FBFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -344,9 +529,9 @@
 			};
 			name = Release;
 		};
-		257EA45EFE79F0095DF853D377812AB4 /* Debug */ = {
+		2B53706B73D72FF2B2BA0E55621FD10A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99A5BC52A1C56B08E4126BDA5F6E469E /* Pods-eco_planner.debug.xcconfig */;
+			baseConfigurationReference = 71E039A8427756348905007EA1D25002 /* Pods-EcoPlanner.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -358,87 +543,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-eco_planner/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-EcoPlanner/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-eco_planner/Pods-eco_planner.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_eco_planner;
+				PRODUCT_NAME = Pods_EcoPlanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4E5B0D4100D4AD90E549FAB450DE97FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CC8A0A7087866047EBA9F857669DBE7 /* Pods-eco_planner.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-eco_planner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-eco_planner/Pods-eco_planner.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_eco_planner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		531E012946D8187E2844B547EF658E21 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56FE12D57F8B1FF29033B0C850A3E55D /* ZAlertView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZAlertView/ZAlertView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZAlertView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZAlertView/ZAlertView.modulemap";
-				PRODUCT_NAME = ZAlertView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -508,9 +627,75 @@
 			};
 			name = Debug;
 		};
-		824C2B69798BF3EB6EA51E49C9F5A81C /* Release */ = {
+		C609F9AA8A8BF6C7CB6D1131B8C4D78B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56FE12D57F8B1FF29033B0C850A3E55D /* ZAlertView.xcconfig */;
+			baseConfigurationReference = 79C95CAEE3BAA29912AB1BA2388F4562 /* Pods-EcoPlanner.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EcoPlanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EcoPlanner/Pods-EcoPlanner.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EcoPlanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F96AA98AA127B444EBF63AFEFC59F302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0670E2190D812C5461D12CC2A42D95C /* ZAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZAlertView/ZAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZAlertView/ZAlertView.modulemap";
+				PRODUCT_NAME = ZAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF8988D89C81E9F2BF3AE4F43C65DB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0670E2190D812C5461D12CC2A42D95C /* ZAlertView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -543,11 +728,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DF7EAEEBFB99F6E98E583C7893F0A7F /* Build configuration list for PBXNativeTarget "Pods-eco_planner" */ = {
+		07D67B1C4A1125241879972F65159A67 /* Build configuration list for PBXNativeTarget "Pods-EcoPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				257EA45EFE79F0095DF853D377812AB4 /* Debug */,
-				4E5B0D4100D4AD90E549FAB450DE97FE /* Release */,
+				2B53706B73D72FF2B2BA0E55621FD10A /* Debug */,
+				C609F9AA8A8BF6C7CB6D1131B8C4D78B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -561,11 +746,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A06A0709DB384023F9FA5A2861480A3 /* Build configuration list for PBXNativeTarget "ZAlertView" */ = {
+		DFE118F8790334F347BE23D66721F087 /* Build configuration list for PBXNativeTarget "ZAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				531E012946D8187E2844B547EF658E21 /* Debug */,
-				824C2B69798BF3EB6EA51E49C9F5A81C /* Release */,
+				F96AA98AA127B444EBF63AFEFC59F302 /* Debug */,
+				FF8988D89C81E9F2BF3AE4F43C65DB4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
