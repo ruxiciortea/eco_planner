@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import SKMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,11 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             if error != nil {
-                print("authorization unsuccessfull")
             } else {
-                print("authorization successfull")
             }
         }
+        
+        SKMapsService.sharedInstance().initializeSKMaps(withAPIKey: "String", settings: SKMapsInitSettings.init())
         
         return true
     }

@@ -21,14 +21,13 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
+        self.navigationController?.navigationBar.tintColor = .white
+        
         self.remindersTableView.dataSource = self
         self.remindersTableView.delegate = self
         
         remindersTableView.reloadData()
-        
-        self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
-        self.navigationController?.navigationBar.tintColor = .white
-        
     }
     
     // MARK: - Reminders TableView

@@ -55,8 +55,7 @@ class AddOrEditReminderViewController: UIViewController {
         } else {
             let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
             
-            self.setZalertView(alertView: alertView, title: "1", message: "1")
-            self.setZalertView(alertView: alertView, title: "2", message: "2")
+            self.setZalertView(alertView: alertView, title: "Recycling day", message: "")
             self.setZalertView(alertView: alertView, title: "Other", message: "")
             
             alertView.show()
