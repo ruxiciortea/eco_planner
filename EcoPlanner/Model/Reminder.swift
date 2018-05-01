@@ -90,20 +90,24 @@ class Reminder: NSObject {
     var message: String?
     var days: [WeekDay]
     var time: (hour: Int, minute: Int)
+//    var isEnabled: Bool
     
     override init() {
         self.title = ""
+        self.message = ""
         self.days = []
         self.time = (0, 0)
-        self.message = ""
-        
+//        self.isEnabled = true
+
         super.init()
     }
     
-    init(title: String, message: String?, days: [WeekDay], time: (hour: Int, minute: Int)) {
+    init(title: String, message: String?, days: [WeekDay], time: (hour: Int, minute: Int)/*, isEnabled: Bool*/) {
         self.title = title
         self.message = message
         self.days = days
         self.time = time
-    }   
+//        self.isEnabled = isEnabled
+    }
+    
 }

@@ -174,4 +174,5 @@ class RemindersManager: NSObject {
         persistentReminder.days = Reminder.convertWeekDaysToInts(weekDays: newReminder.days)
         persistentReminder.time = [newReminder.time.hour, newReminder.time.minute]
     }
+    
 }

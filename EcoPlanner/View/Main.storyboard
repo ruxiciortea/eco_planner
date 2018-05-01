@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="kqA-zf-YLh">
             <objects>
                 <viewController id="HIs-It-ghF" customClass="MapViewController" customModule="EcoPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,14 +34,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZTA-nP-btk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aPq-m8-hwL"/>
+                    <navigationItem key="navigationItem" title="Map" id="aPq-m8-hwL"/>
                     <connections>
                         <outlet property="mapView" destination="5xv-eC-MPb" id="rfU-Hm-Uqj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVr-iy-X2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="-70"/>
+            <point key="canvasLocation" x="321" y="-378"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="NSn-4k-Df7">
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1n-aU-21o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="716"/>
+            <point key="canvasLocation" x="322" y="363"/>
         </scene>
         <!--Add Or Edit Reminder View Controller-->
         <scene sceneID="9En-3L-9uk">
@@ -158,7 +158,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="bR1-i8-f3S"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="hr6-3V-Xo5"/>
                                         </connections>
                                     </button>
@@ -182,7 +181,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="mBP-6o-XCw"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="c2k-Pl-pmh"/>
                                         </connections>
                                     </button>
@@ -206,7 +204,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="tP0-td-gCX"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="RON-AC-b06"/>
                                         </connections>
                                     </button>
@@ -230,7 +227,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="aIS-dB-Wa1"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="5O2-Bd-2bE"/>
                                         </connections>
                                     </button>
@@ -254,7 +250,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="5qZ-A9-w2s"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="qhX-bq-LV9"/>
                                         </connections>
                                     </button>
@@ -278,7 +273,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="wJK-KM-fVd"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="ZaC-ka-rsR"/>
                                         </connections>
                                     </button>
@@ -302,7 +296,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dayButtonPressed:" destination="k7W-pV-11q" eventType="touchUpInside" id="quy-Oa-Dxa"/>
                                             <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="9bN-pA-lyh"/>
                                         </connections>
                                     </button>
@@ -373,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qi9-65-aVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2094" y="716"/>
+            <point key="canvasLocation" x="2263" y="363"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="UVE-Uw-f8M">
@@ -390,7 +383,62 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhM-ED-dP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="717"/>
+            <point key="canvasLocation" x="-650" y="363"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="Rq4-E2-FlD">
+            <objects>
+                <navigationController id="RIr-WC-TzX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tips" id="TTp-FF-MbI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i0L-WP-Axg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="698-r4-hpu" kind="relationship" relationship="rootViewController" id="nUx-RE-FnE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERH-do-nYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="1135"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="fsO-NS-7sW">
+            <objects>
+                <viewController id="698-r4-hpu" customClass="TipsViewController" customModule="EcoPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fyK-Bi-k1R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1aS-wb-J9p">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8wb-Hd-nFc">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8wb-Hd-nFc" id="7Ce-PN-8TJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1aS-wb-J9p" firstAttribute="leading" secondItem="BRf-un-0uL" secondAttribute="leading" id="3b5-RG-igf"/>
+                            <constraint firstItem="1aS-wb-J9p" firstAttribute="top" secondItem="BRf-un-0uL" secondAttribute="top" id="KwN-ys-Z1V"/>
+                            <constraint firstItem="BRf-un-0uL" firstAttribute="trailing" secondItem="1aS-wb-J9p" secondAttribute="trailing" id="XGz-vp-Pvy"/>
+                            <constraint firstItem="BRf-un-0uL" firstAttribute="bottom" secondItem="1aS-wb-J9p" secondAttribute="bottom" id="iXT-Lz-OlP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BRf-un-0uL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tips" id="hdt-cB-kpK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS1-gu-Cc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="1135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gGH-Yh-wNd">
@@ -408,25 +456,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6NY-25-kui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="716"/>
+            <point key="canvasLocation" x="1305" y="363"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hTh-LH-5hb">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZwE-Cv-GJX" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eTv-Di-kb4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Jn-Jr-4j3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="RIr-WC-TzX" kind="relationship" relationship="viewControllers" id="KOV-wf-06w"/>
                         <segue destination="aAO-i9-XRo" kind="relationship" relationship="viewControllers" id="8W6-Ci-xbF"/>
                         <segue destination="faw-1T-Z6e" kind="relationship" relationship="viewControllers" id="uWs-bE-J4C"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPU-1P-IOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2050.4000000000001" y="362.96851574212894"/>
+            <point key="canvasLocation" x="-1619" y="363"/>
         </scene>
         <!--Map-->
         <scene sceneID="Cuc-t1-Jsk">
@@ -445,7 +496,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9l-hU-lmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951.20000000000005" y="-69.715142428785612"/>
+            <point key="canvasLocation" x="-650" y="-378"/>
         </scene>
     </scenes>
     <resources>

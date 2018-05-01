@@ -20,4 +20,5 @@ extension PersistentReminder {
     @NSManaged public var message: String?
     @NSManaged public var days: [Int]
     @NSManaged public var time: [Int]
+    
 }

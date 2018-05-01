@@ -9,7 +9,7 @@
 import UIKit
 import SKMaps
 
-class MapViewController: UIViewController, SKMapViewDelegate {
+class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: SKMapView!
     
@@ -23,9 +23,25 @@ class MapViewController: UIViewController, SKMapViewDelegate {
         SKPositionerService.sharedInstance().startLocationUpdate()
         
         self.mapView.centerOnCurrentPosition()
-        self.mapView.animate(toZoomLevel: 16)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.mapView.centerOnCurrentPosition()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                print("No access")
+            case .authorizedAlways, .authorizedWhenInUse:
+                self.mapView.animate(toZoomLevel: 12)
+            }
+        } else {
+            print("Location services are not enabled")
+        }
+    }
+  
     func mapView(_ mapView: SKMapView, didRotateWithAngle angle: Float) {
         self.mapView.settings.showCompass = true
     }
@@ -34,9 +50,12 @@ class MapViewController: UIViewController, SKMapViewDelegate {
         self.mapView.animate(toBearing: 0)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.mapView.settings.showCompass = false
+            if self.mapView.bearing == 0 {
+                self.mapView.settings.showCompass = false
+            }
         }
     }
+    
 }
 
 

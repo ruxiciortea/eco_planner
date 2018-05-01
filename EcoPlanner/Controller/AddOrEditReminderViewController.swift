@@ -20,7 +20,7 @@ class AddOrEditReminderViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet var dayButtons: [UIButton]!
+    @IBOutlet var dayButtons: [RoundButton]!
     
     var reminderAddedBlock: ((Reminder) -> ())?
     var reminderEditedBlock: ((Reminder) -> ())?
@@ -63,11 +63,7 @@ class AddOrEditReminderViewController: UIViewController {
     }
     
     // MARK: - Actions:
-    
-    @IBAction func dayButtonPressed(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-    }
-    
+
     @IBAction func textFieldChanged(_ sender: Any) {
         if self.titleTextField.text?.isEmpty == false {
             self.textFieldCheck = true
@@ -83,7 +79,7 @@ class AddOrEditReminderViewController: UIViewController {
     
     @IBAction func selectedButtonsCheck(_ sender: Any) {
         for button in dayButtons {
-            if button.isSelected {
+            if button.isOn {
                 self.buttonsCheck = true
                 
                 if self.textFieldCheck {
@@ -127,7 +123,7 @@ class AddOrEditReminderViewController: UIViewController {
         var selectedWeekDays: [WeekDay] = []
 
         for button in dayButtons {
-            if button.isSelected == true {
+            if button.isOn == true {
                 let weekday = WeekDay(weekDayNumber: button.tag)
                 selectedWeekDays.append(weekday)
             }
@@ -140,7 +136,7 @@ class AddOrEditReminderViewController: UIViewController {
         for day in days {
             for button in dayButtons {
                 if button.restorationIdentifier == "\(day)" {
-                    button.isSelected = true
+                    button.activateButton(bool: true)
                 }
             }
         }
@@ -159,11 +155,11 @@ class AddOrEditReminderViewController: UIViewController {
             alertView.dismissWithDuration(0.2)
         }
     }
-    
-    //        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(smthTapped))
-    //        gestureRecognizer.numberOfTapsRequired = 2
-    //
-    //        self.view.addGestureRecognizer(gestureRecognizer)
-    //        self.saveReminderButton.isEnabled = self.titleTextField.text != nil && !self.titleTextField.text!.isEmpty
 
 }
+
+//        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(smthTapped))
+//        gestureRecognizer.numberOfTapsRequired = 2
+//
+//        self.view.addGestureRecognizer(gestureRecognizer)
+//        self.saveReminderButton.isEnabled = self.titleTextField.text != nil && !self.titleTextField.text!.isEmpty

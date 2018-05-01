@@ -40,4 +40,32 @@ class RoundButton: UIButton {
             self.layer.borderColor = borderColor.cgColor
         }
     }
+    
+    var isOn = false
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initButton()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initButton()
+    }
+    
+    func initButton() {
+        addTarget(self, action: #selector(RoundButton.buttonPressed), for: .touchUpInside)
+    }
+    
+    @objc func buttonPressed() {
+        self.activateButton(bool: !isOn)
+    }
+    
+    func activateButton(bool: Bool) {
+        isOn = bool
+        
+        let color = bool ? kNavyBlueColor : .clear
+        self.backgroundColor = color
+    }
+    
 }
