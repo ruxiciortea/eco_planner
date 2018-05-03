@@ -9,7 +9,7 @@
 import UIKit
 import SKMaps
 
-class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerDelegate, SKCalloutViewDelegate {
 
     @IBOutlet weak var mapView: SKMapView!
     
@@ -22,14 +22,16 @@ class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerD
         
         SKPositionerService.sharedInstance().startLocationUpdate()
         
-        self.mapView.centerOnCurrentPosition()
+        for annotation in self.getAnnotaions() {
+            self.mapView.addAnnotation(annotation, with: .init())
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
+
         self.mapView.centerOnCurrentPosition()
-        
+
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
             case .notDetermined, .restricted, .denied:
@@ -41,6 +43,8 @@ class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerD
             print("Location services are not enabled")
         }
     }
+    
+    // MARK: - MapView
   
     func mapView(_ mapView: SKMapView, didRotateWithAngle angle: Float) {
         self.mapView.settings.showCompass = true
@@ -54,6 +58,38 @@ class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerD
                 self.mapView.settings.showCompass = false
             }
         }
+    }
+    
+    func mapView(_ mapView: SKMapView, didSelect annotation: SKAnnotation) {
+        self.mapView.showCallout(for: annotation, withOffset: annotation.offset, animated: true)
+    }
+    
+    // MARK: - Functions
+
+    func getAnnotaions() -> [RecyclingCentre] {
+        var annotationArray: [RecyclingCentre] = []
+        
+        let annotation1 = RecyclingCentre(title: "Street", subtitle: "", latitude: 46.770930, longitude: 23.598920)
+        annotation1.offset.y = 43
+        annotationArray.append(annotation1)
+        
+        let annotation2 = RecyclingCentre(title: "Street", subtitle: "", latitude: 46.770930, longitude: 23.598920)
+        annotation2.offset.y = 43
+        annotationArray.append(annotation2)
+        
+        let annotation3 = RecyclingCentre(title: "Street", subtitle: "", latitude: 46.770930, longitude: 23.598920)
+        annotation3.offset.y = 43
+        annotationArray.append(annotation3)
+        
+        let annotation4 = RecyclingCentre(title: "Street", subtitle: "", latitude: 46.770930, longitude: 23.598920)
+        annotation4.offset.y = 43
+        annotationArray.append(annotation4)
+
+        let annotation5 = RecyclingCentre(title: "Street", subtitle: "", latitude: 46.770930, longitude: 23.598920)
+        annotation5.offset.y = 43
+        annotationArray.append(annotation5)
+        
+        return annotationArray
     }
     
 }

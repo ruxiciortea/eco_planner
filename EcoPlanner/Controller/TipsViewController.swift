@@ -9,11 +9,10 @@
 import UIKit
 
 class TipsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
     }
-    
 }

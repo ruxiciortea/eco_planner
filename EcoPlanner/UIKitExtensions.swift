@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SKMaps
 
 extension UITextField {
     @IBInspectable var placeholderColor: UIColor {
