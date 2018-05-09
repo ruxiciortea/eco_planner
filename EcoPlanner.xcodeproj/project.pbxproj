@@ -25,7 +25,6 @@
 		CE8A27E02052FE72009ED31E /* AddOrEditReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D02052FE72009ED31E /* AddOrEditReminderViewController.swift */; };
 		CE8A27E22052FE72009ED31E /* RemindersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D32052FE72009ED31E /* RemindersManager.swift */; };
 		CE8A27E32052FE72009ED31E /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A27D42052FE72009ED31E /* Reminder.swift */; };
-		CEAE9F2220986CF5009CB96C /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE9F2120986CF5009CB96C /* TipsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		CE8A27D02052FE72009ED31E /* AddOrEditReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOrEditReminderViewController.swift; sourceTree = "<group>"; };
 		CE8A27D32052FE72009ED31E /* RemindersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersManager.swift; sourceTree = "<group>"; };
 		CE8A27D42052FE72009ED31E /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
-		CEAE9F2120986CF5009CB96C /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		FAE7B9250D9695E69CC15E6B /* Pods-eco_planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eco_planner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eco_planner/Pods-eco_planner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +137,6 @@
 				CE8A27CE2052FE72009ED31E /* RemindersViewController.swift */,
 				CE8A27D02052FE72009ED31E /* AddOrEditReminderViewController.swift */,
 				CE3D57CB2090E63A002AA3A5 /* MapViewController.swift */,
-				CEAE9F2120986CF5009CB96C /* TipsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,7 +302,6 @@
 			files = (
 				CE3D57CC2090E63B002AA3A5 /* MapViewController.swift in Sources */,
 				CE5784D420530435008525D0 /* AppDelegate.swift in Sources */,
-				CEAE9F2220986CF5009CB96C /* TipsViewController.swift in Sources */,
 				CE5784E42056C4EC008525D0 /* Reminder+CoreDataClass.swift in Sources */,
 				CE8A27DE2052FE72009ED31E /* RemindersViewController.swift in Sources */,
 				CE8A27E02052FE72009ED31E /* AddOrEditReminderViewController.swift in Sources */,
