@@ -22,7 +22,34 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xv-eC-MPb" customClass="SKMapView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZM-9n-SYC" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="317" y="70" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Nj0-bm-6r5"/>
+                                            <constraint firstAttribute="height" constant="50" id="bmF-yf-bgY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapLocationButton:" destination="HIs-It-ghF" eventType="touchUpInside" id="5Ji-g2-URy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8ZM-9n-SYC" firstAttribute="top" secondItem="5xv-eC-MPb" secondAttribute="top" constant="70" id="JLW-84-PY0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,12 +57,14 @@
                             <constraint firstItem="ZTA-nP-btk" firstAttribute="trailing" secondItem="5xv-eC-MPb" secondAttribute="trailing" id="Mmx-Az-GFB"/>
                             <constraint firstItem="5xv-eC-MPb" firstAttribute="leading" secondItem="ZTA-nP-btk" secondAttribute="leading" id="WNb-B5-XRR"/>
                             <constraint firstItem="5xv-eC-MPb" firstAttribute="top" secondItem="ZTA-nP-btk" secondAttribute="top" id="XTh-OE-lUb"/>
+                            <constraint firstItem="ZTA-nP-btk" firstAttribute="trailing" secondItem="8ZM-9n-SYC" secondAttribute="trailing" constant="8" id="aWu-HH-dkd"/>
                             <constraint firstItem="ZTA-nP-btk" firstAttribute="bottom" secondItem="5xv-eC-MPb" secondAttribute="bottom" id="rpm-e4-UJ7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZTA-nP-btk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="aPq-m8-hwL"/>
                     <connections>
+                        <outlet property="locationButton" destination="8ZM-9n-SYC" id="l2q-Sd-IHg"/>
                         <outlet property="mapView" destination="5xv-eC-MPb" id="rfU-Hm-Uqj"/>
                     </connections>
                 </viewController>
@@ -145,13 +174,15 @@
                                             <constraint firstAttribute="height" constant="38" id="z15-OJ-Tjf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="M"/>
+                                        <state key="normal" title="M">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="19"/>
@@ -162,16 +193,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="tuesday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQJ-yD-fWv" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="75" y="1" width="38" height="38"/>
+                                        <rect key="frame" x="75.5" y="1" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="38" id="Bjk-dg-kBN"/>
                                             <constraint firstAttribute="height" constant="38" id="skX-CI-64M"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="T"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -191,10 +224,12 @@
                                             <constraint firstAttribute="width" constant="38" id="cmH-fm-MVc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="W"/>
+                                        <state key="normal" title="W">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -214,10 +249,12 @@
                                             <constraint firstAttribute="width" constant="38" id="ZcS-4I-z2p"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="T"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -237,13 +274,15 @@
                                             <constraint firstAttribute="width" constant="38" id="CuD-EV-WVk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="F"/>
+                                        <state key="normal" title="F">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="19"/>
@@ -254,19 +293,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" restorationIdentifier="saturday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-r3-ehX" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="262.5" y="1" width="38" height="38"/>
+                                        <rect key="frame" x="263" y="1" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="1hQ-kq-bIj"/>
                                             <constraint firstAttribute="width" constant="38" id="tPn-rb-fQT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="S"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="19"/>
@@ -283,10 +324,12 @@
                                             <constraint firstAttribute="height" constant="38" id="q2i-0N-u7H"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="S"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="NavyBlue"/>
+                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -319,7 +362,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.99629613530000005" green="1" blue="0.98578869810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WKv-h1-phX" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" constant="8" id="33J-N7-zUb"/>
                             <constraint firstItem="fFt-hp-mvP" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" id="7pz-0b-ltW"/>
@@ -339,11 +382,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="jzl-e0-omm">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GAm-ga-EXW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="k7W-pV-11q" id="NBb-6d-YxL"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="7PR-BO-MZm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="k7W-pV-11q" id="deJ-qn-E3p"/>
                             </connections>
@@ -413,6 +458,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Green"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="aAO-i9-XRo" kind="relationship" relationship="viewControllers" id="8W6-Ci-xbF"/>
@@ -444,8 +491,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="NavyBlue">
-            <color red="0.1049999967" green="0.16300000249999999" blue="0.27799999710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Green">
+            <color red="0.14900000393390656" green="0.72000002861022949" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

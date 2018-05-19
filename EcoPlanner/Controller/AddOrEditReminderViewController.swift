@@ -34,7 +34,7 @@ class AddOrEditReminderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
+        self.navigationController?.navigationBar.barTintColor = kGreenColor
         
         if let reminder = self.reminder {
             titleTextField.text = reminder.title

@@ -9,26 +9,26 @@
 import UIKit
 import SKMaps
 
-class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerDelegate, SKCalloutViewDelegate {
+class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDelegate {
 
     @IBOutlet weak var mapView: SKMapView!
+    @IBOutlet weak var locationButton: RoundButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
-
+        self.navigationController?.navigationBar.barTintColor = kGreenColor
         self.mapView.delegate = self
         
         SKPositionerService.sharedInstance().startLocationUpdate()
-        let coordinate = SKPositionerService.sharedInstance().currentCoordinate
-        let region = SKCoordinateRegion(center: coordinate, zoomLevel: 14)
         
-        self.mapView.visibleRegion = region
-        
+        self.mapView.visibleRegion = self.getRegion()
+
         for annotation in self.getAnnotaions() {
             self.mapView.addAnnotation(annotation, with: .init())
         }
+        
+        self.view.addSubview(locationButton)
     }
     
     // MARK: - MapView
@@ -47,76 +47,71 @@ class MapViewController: UIViewController, SKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func mapView(_ mapView: SKMapView, didSelect annotation: SKAnnotation) {
-        self.mapView.hideCallout()
-        self.mapView.showCallout(for: annotation, withOffset: annotation.offset, animated: true)
-    }
-    
     func mapView(_ mapView: SKMapView, calloutViewFor annotation: SKAnnotation) -> UIView? {
         let calloutView = SKCalloutView()
         
-        calloutView.titleLabel.text = ""
+        calloutView.titleLabel.text = RecyclingCentre.recyclingCentreForIdentifier(identifier: annotation.identifier)?.title
         calloutView.subtitleLabel.text = "\(Float(annotation.location.latitude)), \(Float(annotation.location.longitude))"
         
         return calloutView
     }
     
+    func mapView(_ mapView: SKMapView, didSelect annotation: SKAnnotation) {
+        self.mapView.hideCallout()
+        self.mapView.showCallout(for: annotation, withOffset: CGPoint(x: 150, y: 95), animated: true)
+    }
+    
+    func mapView(_ mapView: SKMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        self.mapView.hideCallout()
+    }
+    
+    // MARK: - CalloutView
+    
+    func calloutView(_ calloutView: SKCalloutView!, didTapRightButton rightButton: UIButton!) {
+        
+    }
+    
+    func calloutView(_ calloutView: SKCalloutView!, didTapLeftButton leftButton: UIButton!) {
+        let routingService = SKRoutingService.init()
+        routingService.mapView = self.mapView
+        
+        let routeSettings = SKRouteSettings.init()
+        routeSettings.startCoordinate = SKPositionerService.sharedInstance().currentCoordinate
+        routeSettings.destinationCoordinate = calloutView.location
+    }
+    
+    @IBAction func didTapLocationButton(_ sender: Any) {
+    }
+    
     // MARK: - Functions
 
+    func getRegion() -> SKCoordinateRegion {
+        let coordinate = SKPositionerService.sharedInstance().currentCoordinate
+        var region = SKCoordinateRegion.init()
+        
+        if coordinate.latitude == 0 && coordinate.longitude == 0 {
+            region = SKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 46.770976, longitude: 23.596891), zoomLevel: 8)
+        } else {
+            region = SKCoordinateRegion(center: coordinate, zoomLevel: 14)
+        }
+        
+        return region
+    }
+    
     func getAnnotaions() -> [SKAnnotation] {
         var annotationArray: [SKAnnotation] = []
-        let annotationOffSetYValue: CGFloat = 95
-        let annotationOffSetXValue: CGFloat = 150
+        let recyclingCentres: [RecyclingCentre] = RecyclingCentre.getRecyclingCentres()
         
-        let recyclingCentre1 = RecyclingCentre(title: "Street", subtitle: "0, 0", latitude: 46.770930, longitude: 23.598920, identifier: 1)
-        let annotation1 = SKAnnotation.init()
-        annotation1.location.latitude = CLLocationDegrees(recyclingCentre1.latitude)
-        annotation1.location.longitude = CLLocationDegrees(recyclingCentre1.longitude)
-        annotation1.identifier = recyclingCentre1.identifier
-        annotation1.offset.x = annotationOffSetXValue
-        annotation1.offset.y = annotationOffSetYValue
-        annotation1.annotationType = SKAnnotationType.green
-        annotationArray.append(annotation1)
-        
-        let recyclingCentre2 = RecyclingCentre(title: "Street", subtitle: "0, 0", latitude: 46.760430, longitude: 23.578720, identifier: 2)
-        let annotation2 = SKAnnotation.init()
-        annotation2.location.latitude = CLLocationDegrees(recyclingCentre2.latitude)
-        annotation2.location.longitude = CLLocationDegrees(recyclingCentre2.longitude)
-        annotation2.identifier = recyclingCentre2.identifier
-        annotation2.offset.x = annotationOffSetXValue
-        annotation2.offset.y = annotationOffSetYValue
-        annotation2.annotationType = SKAnnotationType.green
-        annotationArray.append(annotation2)
-        
-        let recyclingCentre3 = RecyclingCentre(title: "Street", subtitle: "0, 0", latitude: 46.750930, longitude: 23.548760, identifier: 3)
-        let annotation3 = SKAnnotation.init()
-        annotation3.location.latitude = CLLocationDegrees(recyclingCentre3.latitude)
-        annotation3.location.longitude = CLLocationDegrees(recyclingCentre3.longitude)
-        annotation3.identifier = recyclingCentre3.identifier
-        annotation3.offset.x = annotationOffSetXValue
-        annotation3.offset.y = annotationOffSetYValue
-        annotation3.annotationType = SKAnnotationType.green
-        annotationArray.append(annotation3)
-        
-        let recyclingCentre4 = RecyclingCentre(title: "Street", subtitle: "0, 0", latitude: 46.770930, longitude: 23.598870, identifier: 4)
-        let annotation4 = SKAnnotation.init()
-        annotation4.location.latitude = CLLocationDegrees(recyclingCentre4.latitude)
-        annotation4.location.longitude = CLLocationDegrees(recyclingCentre4.longitude)
-        annotation4.identifier = recyclingCentre4.identifier
-        annotation4.offset.x = annotationOffSetXValue
-        annotation4.offset.y = annotationOffSetYValue
-        annotation4.annotationType = SKAnnotationType.green
-        annotationArray.append(annotation4)
-        
-        let recyclingCentre5 = RecyclingCentre(title: "Street", subtitle: "0, 0", latitude: 46.778930, longitude: 23.585920, identifier: 5)
-        let annotation5 = SKAnnotation.init()
-        annotation5.location.latitude = CLLocationDegrees(recyclingCentre5.latitude)
-        annotation5.location.longitude = CLLocationDegrees(recyclingCentre5.longitude)
-        annotation5.identifier = recyclingCentre5.identifier
-        annotation5.offset.x = annotationOffSetXValue
-        annotation5.offset.y = annotationOffSetYValue
-        annotation5.annotationType = SKAnnotationType.green
-        annotationArray.append(annotation5)
+        for centre in recyclingCentres {
+            let annotation = SKAnnotation.init()
+            
+            annotation.location.latitude = CLLocationDegrees(centre.latitude)
+            annotation.location.longitude = CLLocationDegrees(centre.longitude)
+            annotation.identifier = centre.identifier
+            annotation.annotationType = SKAnnotationType.green
+            
+            annotationArray.append(annotation)
+        }
         
         return annotationArray
     }

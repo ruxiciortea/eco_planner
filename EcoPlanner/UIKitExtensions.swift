@@ -65,7 +65,7 @@ class RoundButton: UIButton {
     func activateButton(bool: Bool) {
         isOn = bool
         
-        let color = bool ? kNavyBlueColor : .clear
+        let color = bool ? kGreenColor : .clear
         self.backgroundColor = color
     }
     

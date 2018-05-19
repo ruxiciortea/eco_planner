@@ -10,7 +10,7 @@ import UIKit
 import ZAlertView
 import UserNotifications
 
-let kNavyBlueColor = UIColor(named: "NavyBlue")
+let kGreenColor = UIColor(named: "Green")
 
 class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddOrEditReminderViewControllerDelegate {
  
@@ -21,7 +21,7 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = kNavyBlueColor
+        self.navigationController?.navigationBar.barTintColor = kGreenColor
         self.navigationController?.navigationBar.tintColor = .white
         
         self.remindersTableView.dataSource = self
