@@ -12,7 +12,9 @@ import SKMaps
 class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDelegate {
 
     @IBOutlet weak var mapView: SKMapView!
-    @IBOutlet weak var locationButton: RoundButton!
+    @IBOutlet weak var locationButton: UIBarButtonItem!
+    
+    let defaultLocation = CLLocationCoordinate2D(latitude: 46.770976, longitude: 23.596891)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +29,7 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         for annotation in self.getAnnotaions() {
             self.mapView.addAnnotation(annotation, with: .init())
         }
-        
-        self.view.addSubview(locationButton)
-    }
+}
     
     // MARK: - MapView
   
@@ -65,6 +65,10 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         self.mapView.hideCallout()
     }
     
+    func mapView(_ mapView: SKMapView, didStartRegionChangeFrom region: SKCoordinateRegion) {
+        self.locationButton.isEnabled = true
+    }
+    
     // MARK: - CalloutView
     
     func calloutView(_ calloutView: SKCalloutView!, didTapRightButton rightButton: UIButton!) {
@@ -80,7 +84,16 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         routeSettings.destinationCoordinate = calloutView.location
     }
     
+    // MARK: - Actions
+
     @IBAction func didTapLocationButton(_ sender: Any) {
+        self.mapView.animate(toLocation: SKPositionerService.sharedInstance().currentCoordinate, withPadding: .init(), duration: 0.3)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            self.mapView.animate(toZoomLevel: 14)
+        }
+        
+        self.locationButton.isEnabled = false
     }
     
     // MARK: - Functions
@@ -90,7 +103,7 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         var region = SKCoordinateRegion.init()
         
         if coordinate.latitude == 0 && coordinate.longitude == 0 {
-            region = SKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 46.770976, longitude: 23.596891), zoomLevel: 8)
+            region = SKCoordinateRegion(center: defaultLocation, zoomLevel: 8)
         } else {
             region = SKCoordinateRegion(center: coordinate, zoomLevel: 14)
         }

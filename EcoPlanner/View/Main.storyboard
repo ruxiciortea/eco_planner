@@ -22,34 +22,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xv-eC-MPb" customClass="SKMapView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZM-9n-SYC" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="317" y="70" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Nj0-bm-6r5"/>
-                                            <constraint firstAttribute="height" constant="50" id="bmF-yf-bgY"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didTapLocationButton:" destination="HIs-It-ghF" eventType="touchUpInside" id="5Ji-g2-URy"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="8ZM-9n-SYC" firstAttribute="top" secondItem="5xv-eC-MPb" secondAttribute="top" constant="70" id="JLW-84-PY0"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,14 +30,19 @@
                             <constraint firstItem="ZTA-nP-btk" firstAttribute="trailing" secondItem="5xv-eC-MPb" secondAttribute="trailing" id="Mmx-Az-GFB"/>
                             <constraint firstItem="5xv-eC-MPb" firstAttribute="leading" secondItem="ZTA-nP-btk" secondAttribute="leading" id="WNb-B5-XRR"/>
                             <constraint firstItem="5xv-eC-MPb" firstAttribute="top" secondItem="ZTA-nP-btk" secondAttribute="top" id="XTh-OE-lUb"/>
-                            <constraint firstItem="ZTA-nP-btk" firstAttribute="trailing" secondItem="8ZM-9n-SYC" secondAttribute="trailing" constant="8" id="aWu-HH-dkd"/>
                             <constraint firstItem="ZTA-nP-btk" firstAttribute="bottom" secondItem="5xv-eC-MPb" secondAttribute="bottom" id="rpm-e4-UJ7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZTA-nP-btk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="aPq-m8-hwL"/>
+                    <navigationItem key="navigationItem" title="Map" id="aPq-m8-hwL">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Location" id="58a-Ay-uBa">
+                            <connections>
+                                <action selector="didTapLocationButton:" destination="HIs-It-ghF" id="F3F-ub-Pko"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="locationButton" destination="8ZM-9n-SYC" id="l2q-Sd-IHg"/>
+                        <outlet property="locationButton" destination="58a-Ay-uBa" id="QKm-bs-vCM"/>
                         <outlet property="mapView" destination="5xv-eC-MPb" id="rfU-Hm-Uqj"/>
                     </connections>
                 </viewController>
