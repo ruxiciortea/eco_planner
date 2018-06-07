@@ -9,10 +9,6 @@
 import UIKit
 import ZAlertView
 
-protocol AddOrEditReminderViewControllerDelegate: class {
-    // did add song
-}
-
 class AddOrEditReminderViewController: UIViewController {
     
     @IBOutlet weak var saveReminderButton: UIBarButtonItem!
@@ -22,10 +18,11 @@ class AddOrEditReminderViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet var dayButtons: [RoundButton]!
     
+    @IBOutlet weak var scrollViewBottomMarginConstraint: NSLayoutConstraint!
+    
     var reminderAddedBlock: ((Reminder) -> ())?
     var reminderEditedBlock: ((Reminder) -> ())?
         
-    var delegate: AddOrEditReminderViewControllerDelegate?
     var reminder: Reminder?
     var daysArrayIndex: Int?
     var buttonsCheck = false
@@ -34,7 +31,12 @@ class AddOrEditReminderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = kGreenColor
+        self.navigationController?.navigationBar.barTintColor = kBlueColor
+        RemindersViewController.addShadowsTo(view: (navigationController?.navigationBar)!, withOffSet: 2.0)
+        self.timePicker.setValue(kBlueColor, forKey: "textColor")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShowNotification(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHideNotification(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
         if let reminder = self.reminder {
             titleTextField.text = reminder.title
@@ -60,6 +62,17 @@ class AddOrEditReminderViewController: UIViewController {
             
             alertView.show()
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        self.titleTextField.becomeFirstResponder()
     }
     
     // MARK: - Actions:
@@ -143,7 +156,7 @@ class AddOrEditReminderViewController: UIViewController {
     }
     
     func setZalertView(alertView: ZAlertView, title: String, message: String) {
-        alertView.addButton(title) { (_) in
+        alertView.addButton(title, color: kBlueColor, titleColor: kLightGreenColor) { (_) in
             if title != "Other" {
                 self.titleTextField.text = title
                 self.textFieldCheck = true
@@ -154,6 +167,21 @@ class AddOrEditReminderViewController: UIViewController {
             self.messageTextField.text = message
             alertView.dismissWithDuration(0.2)
         }
+    }
+    
+    // MARK: - Keyboard notifications
+    
+    @objc func keyboardWillShowNotification(notification: Notification) {
+        let userInfo:NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let keyboardRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keyboardRectangle.height
+        
+        self.scrollViewBottomMarginConstraint.constant = keyboardHeight
+    }
+    
+    @objc func keyboardWillHideNotification(notification: Notification) {
+        self.scrollViewBottomMarginConstraint.constant = 0
     }
 
 }

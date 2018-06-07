@@ -11,8 +11,11 @@ import ZAlertView
 import UserNotifications
 
 let kGreenColor = UIColor(named: "Green")
+let kBlueColor = UIColor(named: "NavyBlue")
+let kLightGreenColor = UIColor(named: "LightGreen")
+let kBeigeColor = UIColor(named: "Beige")
 
-class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddOrEditReminderViewControllerDelegate {
+class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     @IBOutlet weak var remindersTableView: UITableView!
     
@@ -21,8 +24,9 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = kGreenColor
-        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.barTintColor = kBlueColor
+        RemindersViewController.addShadowsTo(view: (navigationController?.navigationBar)!, withOffSet: 2.0)
+        RemindersViewController.addShadowsTo(view: (tabBarController?.tabBar)!, withOffSet: -2.0)
         
         self.remindersTableView.dataSource = self
         self.remindersTableView.delegate = self
@@ -78,8 +82,6 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
             return
         }
         
-        segueDestination?.delegate = self
-        
         segueDestination?.reminderAddedBlock = { (reminder) in
             RemindersManager.sharedInstance.addReminder(newReminder: reminder)
         }
@@ -102,6 +104,14 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         return "\(number)"
+    }
+    
+    static func addShadowsTo(view: UIView, withOffSet _offset: Double) {
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.lightGray.cgColor
+        view.layer.shadowOpacity = 0.8
+        view.layer.shadowOffset = CGSize(width: 0, height: _offset)
+        view.layer.shadowRadius = 2
     }
     
 }

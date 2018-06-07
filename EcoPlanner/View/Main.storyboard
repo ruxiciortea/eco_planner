@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Recycling Centres-->
         <scene sceneID="kqA-zf-YLh">
             <objects>
                 <viewController id="HIs-It-ghF" customClass="MapViewController" customModule="EcoPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,25 +24,43 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuL-Lz-1Yc" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                <rect key="frame" x="317" y="560" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WI4-ZP-cLD"/>
+                                    <constraint firstAttribute="width" constant="50" id="a2l-c9-dAe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapLocationButton:" destination="HIs-It-ghF" eventType="touchUpInside" id="P7t-3Y-dTk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZTA-nP-btk" firstAttribute="bottom" secondItem="KuL-Lz-1Yc" secondAttribute="bottom" constant="8" id="8o1-eZ-wgg"/>
                             <constraint firstItem="ZTA-nP-btk" firstAttribute="trailing" secondItem="5xv-eC-MPb" secondAttribute="trailing" id="Mmx-Az-GFB"/>
                             <constraint firstItem="5xv-eC-MPb" firstAttribute="leading" secondItem="ZTA-nP-btk" secondAttribute="leading" id="WNb-B5-XRR"/>
                             <constraint firstItem="5xv-eC-MPb" firstAttribute="top" secondItem="ZTA-nP-btk" secondAttribute="top" id="XTh-OE-lUb"/>
+                            <constraint firstItem="ZTA-nP-btk" firstAttribute="trailing" secondItem="KuL-Lz-1Yc" secondAttribute="trailing" constant="8" id="rNM-XQ-XJK"/>
                             <constraint firstItem="ZTA-nP-btk" firstAttribute="bottom" secondItem="5xv-eC-MPb" secondAttribute="bottom" id="rpm-e4-UJ7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZTA-nP-btk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="aPq-m8-hwL">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Location" id="58a-Ay-uBa">
-                            <connections>
-                                <action selector="didTapLocationButton:" destination="HIs-It-ghF" id="F3F-ub-Pko"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Recycling Centres" id="aPq-m8-hwL"/>
                     <connections>
-                        <outlet property="locationButton" destination="58a-Ay-uBa" id="QKm-bs-vCM"/>
+                        <outlet property="locationButton" destination="KuL-Lz-1Yc" id="eY0-5h-E0E"/>
                         <outlet property="mapView" destination="5xv-eC-MPb" id="rfU-Hm-Uqj"/>
                     </connections>
                 </viewController>
@@ -60,7 +78,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zRR-mW-RWS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="GreenBeige"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="70" id="AMm-5h-5Qa">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
@@ -68,7 +86,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AMm-5h-5Qa" id="Ycx-ml-OMZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -83,6 +103,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Reminders" id="7q4-m1-rOj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cO0-5q-Pib">
+                            <color key="tintColor" name="GreenBeige"/>
                             <connections>
                                 <segue destination="TBa-Mh-kfg" kind="presentation" identifier="AddReminderSegue" id="9El-KN-eT7"/>
                             </connections>
@@ -97,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="321" y="743"/>
         </scene>
-        <!--Add Or Edit Reminder View Controller-->
+        <!--Add Reminder-->
         <scene sceneID="9En-3L-9uk">
             <objects>
                 <viewController id="k7W-pV-11q" customClass="AddOrEditReminderViewController" customModule="EcoPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,268 +126,292 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-aE-WxM">
-                                <rect key="frame" x="8" y="72" width="359" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7zh-bE-RwZ"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="textFieldChanged:" destination="k7W-pV-11q" eventType="editingChanged" id="Qyj-G0-Zcn"/>
-                                </connections>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x7O-zf-u9W">
-                                <rect key="frame" x="0.0" y="120" width="375" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="SBd-Jk-cVt"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="539989411.40974605">
-                                    <!--2018-02-10 21:03:31 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
-                                    <!--1970-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
-                                    <!--2037-12-31 11:00:00 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="ro"/>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKv-h1-phX">
-                                <rect key="frame" x="8" y="338" width="359" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="mhb-OD-aTZ"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-hp-mvP">
-                                <rect key="frame" x="0.0" y="290" width="375" height="40"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTN-Al-w2I">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="monday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-TX-Ruj" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="1" width="38" height="38"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hd6-It-SHm">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-aE-WxM">
+                                                <rect key="frame" x="16" y="8" width="343" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="7zh-bE-RwZ"/>
+                                                </constraints>
+                                                <color key="textColor" name="NavyBlue"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <action selector="textFieldChanged:" destination="k7W-pV-11q" eventType="editingChanged" id="Qyj-G0-Zcn"/>
+                                                </connections>
+                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x7O-zf-u9W">
+                                                <rect key="frame" x="8" y="56" width="359" height="162"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="162" id="SBd-Jk-cVt"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="539989411.40974605">
+                                                    <!--2018-02-10 21:03:31 +0000-->
+                                                </date>
+                                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                                    <!--1970-01-01 11:00:00 +0000-->
+                                                </date>
+                                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                                    <!--2037-12-31 11:00:00 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ro"/>
+                                            </datePicker>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-hp-mvP">
+                                                <rect key="frame" x="-8" y="226" width="391" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="monday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-TX-Ruj" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="30.5" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="38" id="qXq-Go-P3K"/>
+                                                            <constraint firstAttribute="height" constant="38" id="z15-OJ-Tjf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="M">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="hr6-3V-Xo5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="tuesday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQJ-yD-fWv" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="79.5" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="38" id="Bjk-dg-kBN"/>
+                                                            <constraint firstAttribute="height" constant="38" id="skX-CI-64M"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="T">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="c2k-Pl-pmh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="wednesday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ol-jV-V7t" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="127.5" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="NNL-GR-uhd"/>
+                                                            <constraint firstAttribute="width" constant="38" id="cmH-fm-MVc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="W">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="RON-AC-b06"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="thursday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-b7-jFF" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="176.5" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="53d-T4-TfC"/>
+                                                            <constraint firstAttribute="width" constant="38" id="ZcS-4I-z2p"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="T">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="5O2-Bd-2bE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="friday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-lX-1op" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="225.5" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="9LL-Se-5kC"/>
+                                                            <constraint firstAttribute="width" constant="38" id="CuD-EV-WVk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="F">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="qhX-bq-LV9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" restorationIdentifier="saturday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-r3-ehX" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="274.5" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="1hQ-kq-bIj"/>
+                                                            <constraint firstAttribute="width" constant="38" id="tPn-rb-fQT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="S">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="ZaC-ka-rsR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" restorationIdentifier="sunday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-RI-vbC" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                        <rect key="frame" x="323" y="1" width="38" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="38" id="9Rr-1P-CJD"/>
+                                                            <constraint firstAttribute="height" constant="38" id="q2i-0N-u7H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="S">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="NavyBlue"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="19"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="9bN-pA-lyh"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="eOt-r3-ehX" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="BiD-Tq-MYg"/>
+                                                    <constraint firstItem="EZJ-lX-1op" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="1.25" id="ByF-zt-pJo"/>
+                                                    <constraint firstAttribute="height" constant="40" id="C0p-0A-2Y5"/>
+                                                    <constraint firstItem="9ol-jV-V7t" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="0.75" id="EZ6-KS-aw6"/>
+                                                    <constraint firstItem="VQJ-yD-fWv" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="0.5" id="Lpk-4f-Q48"/>
+                                                    <constraint firstItem="Hzm-RI-vbC" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="Q4z-qV-xiw"/>
+                                                    <constraint firstItem="9ol-jV-V7t" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="QfO-tP-Owa"/>
+                                                    <constraint firstItem="Hzm-RI-vbC" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="1.75" id="Yun-9f-Qgp"/>
+                                                    <constraint firstItem="PDh-b7-jFF" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="cQz-12-19c"/>
+                                                    <constraint firstItem="eOt-r3-ehX" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="1.5" id="fYd-7Z-9ff"/>
+                                                    <constraint firstItem="7BK-TX-Ruj" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="pe2-ht-IJI"/>
+                                                    <constraint firstItem="7BK-TX-Ruj" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="0.25" id="psj-BK-6Pd"/>
+                                                    <constraint firstItem="PDh-b7-jFF" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" id="r88-Rs-s1A"/>
+                                                    <constraint firstItem="VQJ-yD-fWv" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="uJU-ea-OyN"/>
+                                                    <constraint firstItem="EZJ-lX-1op" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="uU4-gF-ge3"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKv-h1-phX">
+                                                <rect key="frame" x="16" y="274" width="343" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="mhb-OD-aTZ"/>
+                                                </constraints>
+                                                <color key="textColor" name="NavyBlue"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" name="LightGreen"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="qXq-Go-P3K"/>
-                                            <constraint firstAttribute="height" constant="38" id="z15-OJ-Tjf"/>
+                                            <constraint firstAttribute="trailing" secondItem="WKv-h1-phX" secondAttribute="trailing" constant="16" id="Aek-N6-LdY"/>
+                                            <constraint firstItem="x7O-zf-u9W" firstAttribute="leading" secondItem="Hd6-It-SHm" secondAttribute="leading" constant="8" id="As1-Lr-u5Z"/>
+                                            <constraint firstItem="x7O-zf-u9W" firstAttribute="top" secondItem="viQ-aE-WxM" secondAttribute="bottom" constant="8" id="E8w-W8-5tB"/>
+                                            <constraint firstAttribute="trailing" secondItem="x7O-zf-u9W" secondAttribute="trailing" constant="8" id="HdH-6v-JaQ"/>
+                                            <constraint firstItem="WKv-h1-phX" firstAttribute="leading" secondItem="Hd6-It-SHm" secondAttribute="leading" constant="16" id="He6-z4-KHn"/>
+                                            <constraint firstItem="viQ-aE-WxM" firstAttribute="leading" secondItem="Hd6-It-SHm" secondAttribute="leading" constant="16" id="LPZ-06-BaH"/>
+                                            <constraint firstAttribute="trailing" secondItem="viQ-aE-WxM" secondAttribute="trailing" constant="16" id="bUA-dM-aD3"/>
+                                            <constraint firstAttribute="trailing" secondItem="fFt-hp-mvP" secondAttribute="trailing" constant="-8" id="iau-H9-2Kk"/>
+                                            <constraint firstItem="WKv-h1-phX" firstAttribute="top" secondItem="fFt-hp-mvP" secondAttribute="bottom" constant="8" id="oBZ-bP-K8o"/>
+                                            <constraint firstItem="fFt-hp-mvP" firstAttribute="leading" secondItem="Hd6-It-SHm" secondAttribute="leading" constant="-8" id="saw-SZ-ZHC"/>
+                                            <constraint firstItem="viQ-aE-WxM" firstAttribute="top" secondItem="Hd6-It-SHm" secondAttribute="top" constant="8" id="vvD-k6-hUC"/>
+                                            <constraint firstItem="fFt-hp-mvP" firstAttribute="top" secondItem="x7O-zf-u9W" secondAttribute="bottom" constant="8" id="vvV-P9-9UC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="M">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="hr6-3V-Xo5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="tuesday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQJ-yD-fWv" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="75.5" y="1" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="Bjk-dg-kBN"/>
-                                            <constraint firstAttribute="height" constant="38" id="skX-CI-64M"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="T">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="c2k-Pl-pmh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="wednesday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ol-jV-V7t" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="121.5" y="1" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="NNL-GR-uhd"/>
-                                            <constraint firstAttribute="width" constant="38" id="cmH-fm-MVc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="W">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="RON-AC-b06"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="thursday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-b7-jFF" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="168.5" y="1" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="53d-T4-TfC"/>
-                                            <constraint firstAttribute="width" constant="38" id="ZcS-4I-z2p"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="T">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="5O2-Bd-2bE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="friday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-lX-1op" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="215.5" y="1" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="9LL-Se-5kC"/>
-                                            <constraint firstAttribute="width" constant="38" id="CuD-EV-WVk"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="F">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="qhX-bq-LV9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" restorationIdentifier="saturday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-r3-ehX" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="263" y="1" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="1hQ-kq-bIj"/>
-                                            <constraint firstAttribute="width" constant="38" id="tPn-rb-fQT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="S">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="ZaC-ka-rsR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" restorationIdentifier="sunday" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-RI-vbC" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="309" y="1" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="9Rr-1P-CJD"/>
-                                            <constraint firstAttribute="height" constant="38" id="q2i-0N-u7H"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="S">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.027019237660000001" green="0.46943188949999998" blue="0.22743526459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="selectedButtonsCheck:" destination="k7W-pV-11q" eventType="touchUpInside" id="9bN-pA-lyh"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eOt-r3-ehX" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="BiD-Tq-MYg"/>
-                                    <constraint firstItem="EZJ-lX-1op" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="1.25" id="ByF-zt-pJo"/>
-                                    <constraint firstAttribute="height" constant="40" id="C0p-0A-2Y5"/>
-                                    <constraint firstItem="9ol-jV-V7t" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="0.75" id="EZ6-KS-aw6"/>
-                                    <constraint firstItem="VQJ-yD-fWv" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="0.5" id="Lpk-4f-Q48"/>
-                                    <constraint firstItem="Hzm-RI-vbC" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="Q4z-qV-xiw"/>
-                                    <constraint firstItem="9ol-jV-V7t" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="QfO-tP-Owa"/>
-                                    <constraint firstItem="Hzm-RI-vbC" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="1.75" id="Yun-9f-Qgp"/>
-                                    <constraint firstItem="PDh-b7-jFF" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="cQz-12-19c"/>
-                                    <constraint firstItem="eOt-r3-ehX" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="1.5" id="fYd-7Z-9ff"/>
-                                    <constraint firstItem="7BK-TX-Ruj" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="pe2-ht-IJI"/>
-                                    <constraint firstItem="7BK-TX-Ruj" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" multiplier="0.25" id="psj-BK-6Pd"/>
-                                    <constraint firstItem="PDh-b7-jFF" firstAttribute="centerX" secondItem="fFt-hp-mvP" secondAttribute="centerX" id="r88-Rs-s1A"/>
-                                    <constraint firstItem="VQJ-yD-fWv" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="uJU-ea-OyN"/>
-                                    <constraint firstItem="EZJ-lX-1op" firstAttribute="centerY" secondItem="fFt-hp-mvP" secondAttribute="centerY" id="uU4-gF-ge3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hd6-It-SHm" secondAttribute="bottom" id="I9x-ba-myd"/>
+                                    <constraint firstItem="Hd6-It-SHm" firstAttribute="leading" secondItem="hTN-Al-w2I" secondAttribute="leading" id="V9a-R1-T0H"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hd6-It-SHm" secondAttribute="trailing" id="haZ-9P-5cI"/>
+                                    <constraint firstItem="Hd6-It-SHm" firstAttribute="top" secondItem="hTN-Al-w2I" secondAttribute="top" id="vqk-cp-U2m"/>
                                 </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="LightGreen"/>
                         <constraints>
-                            <constraint firstItem="WKv-h1-phX" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" constant="8" id="33J-N7-zUb"/>
-                            <constraint firstItem="fFt-hp-mvP" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" id="7pz-0b-ltW"/>
-                            <constraint firstItem="MbS-rU-nCA" firstAttribute="trailing" secondItem="fFt-hp-mvP" secondAttribute="trailing" id="GBS-vw-1xG"/>
-                            <constraint firstItem="WKv-h1-phX" firstAttribute="top" secondItem="fFt-hp-mvP" secondAttribute="bottom" constant="8" id="Szj-c4-kuC"/>
-                            <constraint firstItem="x7O-zf-u9W" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" id="kH5-Zq-qRh"/>
-                            <constraint firstItem="fFt-hp-mvP" firstAttribute="centerX" secondItem="MbS-rU-nCA" secondAttribute="centerX" id="oTx-H8-V7x"/>
-                            <constraint firstItem="MbS-rU-nCA" firstAttribute="trailing" secondItem="WKv-h1-phX" secondAttribute="trailing" constant="8" id="ovq-xZ-iC2"/>
-                            <constraint firstItem="x7O-zf-u9W" firstAttribute="top" secondItem="viQ-aE-WxM" secondAttribute="bottom" constant="8" id="ppu-iO-RTc"/>
-                            <constraint firstItem="fFt-hp-mvP" firstAttribute="top" secondItem="x7O-zf-u9W" secondAttribute="bottom" constant="8" id="q9K-kc-xW3"/>
-                            <constraint firstItem="MbS-rU-nCA" firstAttribute="trailing" secondItem="viQ-aE-WxM" secondAttribute="trailing" constant="8" id="seJ-Ja-2AT"/>
-                            <constraint firstItem="MbS-rU-nCA" firstAttribute="trailing" secondItem="x7O-zf-u9W" secondAttribute="trailing" id="tTe-ab-q0R"/>
-                            <constraint firstItem="viQ-aE-WxM" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" constant="8" id="wFU-xr-GXq"/>
-                            <constraint firstItem="viQ-aE-WxM" firstAttribute="top" secondItem="MbS-rU-nCA" secondAttribute="top" constant="8" id="yto-cl-3of"/>
+                            <constraint firstItem="Hd6-It-SHm" firstAttribute="width" secondItem="MbS-rU-nCA" secondAttribute="width" id="8Gm-J2-aWQ"/>
+                            <constraint firstItem="hTN-Al-w2I" firstAttribute="top" secondItem="MbS-rU-nCA" secondAttribute="top" id="BEd-UH-hCg"/>
+                            <constraint firstItem="MbS-rU-nCA" firstAttribute="bottom" secondItem="hTN-Al-w2I" secondAttribute="bottom" id="Gs2-Ve-AJK"/>
+                            <constraint firstItem="MbS-rU-nCA" firstAttribute="trailing" secondItem="hTN-Al-w2I" secondAttribute="trailing" id="anL-qH-8nu"/>
+                            <constraint firstItem="Hd6-It-SHm" firstAttribute="height" secondItem="MbS-rU-nCA" secondAttribute="height" id="ebg-wf-NrP"/>
+                            <constraint firstItem="hTN-Al-w2I" firstAttribute="leading" secondItem="MbS-rU-nCA" secondAttribute="leading" id="xHz-hB-2gd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MbS-rU-nCA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jzl-e0-omm">
+                    <navigationItem key="navigationItem" title="Add Reminder" id="jzl-e0-omm">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GAm-ga-EXW">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="GreenBeige"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="k7W-pV-11q" id="NBb-6d-YxL"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="7PR-BO-MZm">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="GreenBeige"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="k7W-pV-11q" id="deJ-qn-E3p"/>
                             </connections>
@@ -376,20 +421,56 @@
                         <outlet property="cancelButton" destination="GAm-ga-EXW" id="bQ7-Mf-Y1j"/>
                         <outlet property="messageTextField" destination="WKv-h1-phX" id="fWi-BC-B6A"/>
                         <outlet property="saveReminderButton" destination="7PR-BO-MZm" id="Mhk-wl-JTe"/>
+                        <outlet property="scrollViewBottomMarginConstraint" destination="Gs2-Ve-AJK" id="A1e-fC-Iil"/>
                         <outlet property="timePicker" destination="x7O-zf-u9W" id="2bC-Ri-6hV"/>
                         <outlet property="titleTextField" destination="viQ-aE-WxM" id="nsi-2P-eL4"/>
-                        <outletCollection property="dayButtons" destination="7BK-TX-Ruj" collectionClass="NSMutableArray" id="6NV-jS-2uw"/>
                         <outletCollection property="dayButtons" destination="VQJ-yD-fWv" collectionClass="NSMutableArray" id="TLp-kZ-XFP"/>
-                        <outletCollection property="dayButtons" destination="9ol-jV-V7t" collectionClass="NSMutableArray" id="6Ra-lj-fVG"/>
-                        <outletCollection property="dayButtons" destination="PDh-b7-jFF" collectionClass="NSMutableArray" id="ARB-Uh-XHc"/>
-                        <outletCollection property="dayButtons" destination="EZJ-lX-1op" collectionClass="NSMutableArray" id="nJL-On-sfg"/>
-                        <outletCollection property="dayButtons" destination="eOt-r3-ehX" collectionClass="NSMutableArray" id="loY-Qk-aKY"/>
                         <outletCollection property="dayButtons" destination="Hzm-RI-vbC" collectionClass="NSMutableArray" id="kAQ-8i-GlW"/>
+                        <outletCollection property="dayButtons" destination="eOt-r3-ehX" collectionClass="NSMutableArray" id="loY-Qk-aKY"/>
+                        <outletCollection property="dayButtons" destination="7BK-TX-Ruj" collectionClass="NSMutableArray" id="6NV-jS-2uw"/>
+                        <outletCollection property="dayButtons" destination="PDh-b7-jFF" collectionClass="NSMutableArray" id="ARB-Uh-XHc"/>
+                        <outletCollection property="dayButtons" destination="9ol-jV-V7t" collectionClass="NSMutableArray" id="6Ra-lj-fVG"/>
+                        <outletCollection property="dayButtons" destination="EZJ-lX-1op" collectionClass="NSMutableArray" id="nJL-On-sfg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qi9-65-aVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="743"/>
+            <point key="canvasLocation" x="2264.8000000000002" y="742.5787106446777"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="sIA-F4-Mes">
+            <objects>
+                <viewController id="PTq-4K-csB" customClass="TipsViewController" customModule="EcoPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mM7-Zf-dkm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-sT-gbM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WAv-mj-pk7" firstAttribute="trailing" secondItem="pYi-sT-gbM" secondAttribute="trailing" id="Ccw-ow-dvE"/>
+                            <constraint firstItem="pYi-sT-gbM" firstAttribute="leading" secondItem="WAv-mj-pk7" secondAttribute="leading" id="CuN-Z5-GpM"/>
+                            <constraint firstItem="WAv-mj-pk7" firstAttribute="bottom" secondItem="pYi-sT-gbM" secondAttribute="bottom" id="VXO-6J-HyI"/>
+                            <constraint firstItem="pYi-sT-gbM" firstAttribute="top" secondItem="WAv-mj-pk7" secondAttribute="top" id="VjF-Fo-k7t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WAv-mj-pk7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="wtE-dj-xYj"/>
+                    <connections>
+                        <outlet property="webView" destination="pYi-sT-gbM" id="Wd9-oO-ZnY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eF1-UI-AtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1620" y="1194"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="UVE-Uw-f8M">
@@ -436,12 +517,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="Green"/>
+                        <color key="barTintColor" name="NavyBlue"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="aAO-i9-XRo" kind="relationship" relationship="viewControllers" id="8W6-Ci-xbF"/>
                         <segue destination="faw-1T-Z6e" kind="relationship" relationship="viewControllers" id="uWs-bE-J4C"/>
+                        <segue destination="PTq-4K-csB" kind="relationship" relationship="viewControllers" id="fLM-9x-fgA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPU-1P-IOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,8 +551,35 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Green">
-            <color red="0.14900000393390656" green="0.72000002861022949" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="GreenBeige">
+            <color red="0.77600002288818359" green="0.85500001907348633" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGreen">
+            <color red="0.77600002288818359" green="0.85500001907348633" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001668930054" green="0.29399999976158142" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

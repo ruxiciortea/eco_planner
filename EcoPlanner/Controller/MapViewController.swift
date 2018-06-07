@@ -9,18 +9,25 @@
 import UIKit
 import SKMaps
 
+let kDefaultLocation = CLLocationCoordinate2D(latitude: 46.770976, longitude: 23.596891)
+let kDefaultZoomLevel: Float = 14
+let kAnimationDuration: Float = 0.3
+
 class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDelegate {
 
     @IBOutlet weak var mapView: SKMapView!
-    @IBOutlet weak var locationButton: UIBarButtonItem!
-    
-    let defaultLocation = CLLocationCoordinate2D(latitude: 46.770976, longitude: 23.596891)
+    @IBOutlet weak var locationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = kGreenColor
+        self.navigationController?.navigationBar.barTintColor = kBlueColor
+        RemindersViewController.addShadowsTo(view: (navigationController?.navigationBar)!, withOffSet: 2.0)
+        RemindersViewController.addShadowsTo(view: (tabBarController?.tabBar)!, withOffSet: -2.0)
+        
         self.mapView.delegate = self
+        self.mapView.settings.osmAttributionPosition = .bottomLeft
+        self.mapView.settings.companyAttributionPosition = .bottomLeft
         
         SKPositionerService.sharedInstance().startLocationUpdate()
         
@@ -47,18 +54,12 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         }
     }
     
-    func mapView(_ mapView: SKMapView, calloutViewFor annotation: SKAnnotation) -> UIView? {
-        let calloutView = SKCalloutView()
-        
-        calloutView.titleLabel.text = RecyclingCentre.recyclingCentreForIdentifier(identifier: annotation.identifier)?.title
-        calloutView.subtitleLabel.text = "\(Float(annotation.location.latitude)), \(Float(annotation.location.longitude))"
-        
-        return calloutView
-    }
-    
     func mapView(_ mapView: SKMapView, didSelect annotation: SKAnnotation) {
-        self.mapView.hideCallout()
-        self.mapView.showCallout(for: annotation, withOffset: CGPoint(x: 150, y: 95), animated: true)
+        self.mapView.showCallout(atLocation: annotation.location, withOffset: CGPoint(x: 0, y: 42.0), animated: true)
+        self.mapView.calloutView.titleLabel.text = RecyclingCentre.recyclingCentreForIdentifier(identifier: annotation.identifier)?.title
+        self.mapView.calloutView.subtitleLabel.text = RecyclingCentre.recyclingCentreForIdentifier(identifier: annotation.identifier)?.subtitle
+        self.mapView.calloutView.rightButton.isHidden = true
+        self.mapView.calloutView.delegate = self
     }
     
     func mapView(_ mapView: SKMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -67,6 +68,7 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
     
     func mapView(_ mapView: SKMapView, didStartRegionChangeFrom region: SKCoordinateRegion) {
         self.locationButton.isEnabled = true
+        self.locationButton.isHidden = false
     }
     
     // MARK: - CalloutView
@@ -76,24 +78,28 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
     }
     
     func calloutView(_ calloutView: SKCalloutView!, didTapLeftButton leftButton: UIButton!) {
-        let routingService = SKRoutingService.init()
-        routingService.mapView = self.mapView
+        SKRoutingService.sharedInstance().mapView = self.mapView
+        SKRoutingService.sharedInstance().clearCurrentRoutes()
         
-        let routeSettings = SKRouteSettings.init()
+        let routeSettings = SKRouteSettings()
         routeSettings.startCoordinate = SKPositionerService.sharedInstance().currentCoordinate
         routeSettings.destinationCoordinate = calloutView.location
+        routeSettings.routeMode = .pedestrian
+        
+        SKRoutingService.sharedInstance().calculateRoute(routeSettings)
     }
     
     // MARK: - Actions
 
     @IBAction func didTapLocationButton(_ sender: Any) {
-        self.mapView.animate(toLocation: SKPositionerService.sharedInstance().currentCoordinate, withPadding: .init(), duration: 0.3)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            self.mapView.animate(toZoomLevel: 14)
-        }
-        
+        self.locationButton.backgroundColor = .gray
+        self.mapView.animate(toLocation: SKPositionerService.sharedInstance().currentCoordinate, withPadding: .init(), duration: kAnimationDuration)
         self.locationButton.isEnabled = false
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(kAnimationDuration)) {
+            self.mapView.animate(toZoomLevel: kDefaultZoomLevel)
+            self.locationButton.isHidden = true
+        }
     }
     
     // MARK: - Functions
@@ -103,9 +109,9 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         var region = SKCoordinateRegion.init()
         
         if coordinate.latitude == 0 && coordinate.longitude == 0 {
-            region = SKCoordinateRegion(center: defaultLocation, zoomLevel: 8)
+            region = SKCoordinateRegion(center: kDefaultLocation, zoomLevel: 8)
         } else {
-            region = SKCoordinateRegion(center: coordinate, zoomLevel: 14)
+            region = SKCoordinateRegion(center: coordinate, zoomLevel: kDefaultZoomLevel)
         }
         
         return region
@@ -121,7 +127,7 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
             annotation.location.latitude = CLLocationDegrees(centre.latitude)
             annotation.location.longitude = CLLocationDegrees(centre.longitude)
             annotation.identifier = centre.identifier
-            annotation.annotationType = SKAnnotationType.green
+            annotation.annotationType = SKAnnotationType.purple
             
             annotationArray.append(annotation)
         }

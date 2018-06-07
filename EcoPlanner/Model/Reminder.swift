@@ -99,7 +99,7 @@ class Reminder: NSObject {
 
         super.init()
     }
-    
+
     init(title: String, message: String?, days: [WeekDay], time: (hour: Int, minute: Int)) {
         self.title = title
         self.message = message
