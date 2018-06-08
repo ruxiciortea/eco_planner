@@ -80,19 +80,237 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" name="GreenBeige"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="70" id="AMm-5h-5Qa">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="90" id="Kli-w2-clh" customClass="ReminderCell" customModule="EcoPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AMm-5h-5Qa" id="Ycx-ml-OMZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kli-w2-clh" id="Km4-5S-w8C">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-Uf-lID">
+                                                    <rect key="frame" x="15" y="10" width="86.5" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ckl-yG-Pac"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                                    <color key="textColor" name="NavyBlue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqT-yJ-D3R">
+                                                    <rect key="frame" x="17" y="55" width="35.5" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="qxg-MG-qgK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="NavyBlue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYQ-vC-orJ">
+                                                    <rect key="frame" x="175" y="25" width="190" height="40"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="monday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-cr-IYS" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="13.5" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="Ewt-dZ-WDR"/>
+                                                                <constraint firstAttribute="height" constant="22" id="yr5-rF-zPc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="M">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="tuesday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03o-47-rlB" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="36.5" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="LcY-4f-OsY"/>
+                                                                <constraint firstAttribute="height" constant="22" id="cKw-cz-iy2"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="T">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="wednesday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-DC-cYZ" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="61" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="F4Q-7K-lb1"/>
+                                                                <constraint firstAttribute="width" constant="22" id="zU8-9e-MxG"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="W">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thursday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sa-7R-wDA" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="84" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="Agl-cf-mnz"/>
+                                                                <constraint firstAttribute="height" constant="22" id="N08-Ao-oSr"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="T">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="friday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7F-hS-31D" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="108.5" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="0Qs-UM-0Al"/>
+                                                                <constraint firstAttribute="height" constant="22" id="4hK-tB-dK6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="F">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="saturday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy5-5a-7J1" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="131.5" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="0KP-IU-dLb"/>
+                                                                <constraint firstAttribute="height" constant="22" id="4wi-BZ-nCp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="S">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="sunday" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyk-vz-Pya" customClass="RoundButton" customModule="EcoPlanner" customModuleProvider="target">
+                                                            <rect key="frame" x="156" y="9" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="cYv-5p-OUH"/>
+                                                                <constraint firstAttribute="height" constant="22" id="pdl-gQ-0d4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="S">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="NavyBlue"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="11"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="LightGreen"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Swe-cr-IYS" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" multiplier="0.25" id="5JV-LC-SQ7"/>
+                                                        <constraint firstItem="dy5-5a-7J1" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="6A4-Hi-Xng"/>
+                                                        <constraint firstItem="P7F-hS-31D" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="G4x-Sh-bws"/>
+                                                        <constraint firstItem="zyk-vz-Pya" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" multiplier="1.75" id="Hhe-jQ-InT"/>
+                                                        <constraint firstItem="Swe-cr-IYS" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="Ixz-MW-2HL"/>
+                                                        <constraint firstItem="SVm-DC-cYZ" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" multiplier="0.75" id="ODX-2a-VkR"/>
+                                                        <constraint firstItem="dy5-5a-7J1" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" multiplier="1.5" id="RK2-ko-tQX"/>
+                                                        <constraint firstItem="2sa-7R-wDA" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" id="UdI-aI-AYN"/>
+                                                        <constraint firstItem="zyk-vz-Pya" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="XrW-B4-H3L"/>
+                                                        <constraint firstItem="2sa-7R-wDA" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="Z2K-eS-cxM"/>
+                                                        <constraint firstItem="SVm-DC-cYZ" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="ah5-rS-pbe"/>
+                                                        <constraint firstItem="03o-47-rlB" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" multiplier="0.5" id="dBQ-Dg-zSN"/>
+                                                        <constraint firstAttribute="height" constant="40" id="dt8-1F-Sph"/>
+                                                        <constraint firstItem="03o-47-rlB" firstAttribute="centerY" secondItem="bYQ-vC-orJ" secondAttribute="centerY" id="kRD-aD-W65"/>
+                                                        <constraint firstItem="P7F-hS-31D" firstAttribute="centerX" secondItem="bYQ-vC-orJ" secondAttribute="centerX" multiplier="1.25" id="xCN-4h-EXt"/>
+                                                        <constraint firstAttribute="width" constant="190" id="yvY-eL-gfG"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bYQ-vC-orJ" secondAttribute="trailing" constant="10" id="1Ry-5W-R1K"/>
+                                                <constraint firstItem="bYQ-vC-orJ" firstAttribute="centerY" secondItem="Km4-5S-w8C" secondAttribute="centerY" id="4RL-gp-pG8"/>
+                                                <constraint firstItem="vhh-Uf-lID" firstAttribute="leading" secondItem="Km4-5S-w8C" secondAttribute="leading" constant="15" id="Mkk-5K-w6u"/>
+                                                <constraint firstItem="eqT-yJ-D3R" firstAttribute="top" secondItem="vhh-Uf-lID" secondAttribute="bottom" constant="5" id="UnN-dR-KB9"/>
+                                                <constraint firstItem="vhh-Uf-lID" firstAttribute="top" secondItem="Km4-5S-w8C" secondAttribute="top" constant="10" id="Ux7-pu-9Sm"/>
+                                                <constraint firstItem="eqT-yJ-D3R" firstAttribute="leading" secondItem="Km4-5S-w8C" secondAttribute="leading" constant="17" id="ZJ9-Gq-ggj"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="timeLabel" destination="vhh-Uf-lID" id="GRP-Ng-Emo"/>
+                                            <outlet property="titleLabel" destination="eqT-yJ-D3R" id="nuy-u1-O5k"/>
+                                            <outletCollection property="dayButtons" destination="P7F-hS-31D" collectionClass="NSMutableArray" id="rNq-iU-6OS"/>
+                                            <outletCollection property="dayButtons" destination="Swe-cr-IYS" collectionClass="NSMutableArray" id="5Ke-AW-8YI"/>
+                                            <outletCollection property="dayButtons" destination="03o-47-rlB" collectionClass="NSMutableArray" id="tUw-j8-qIp"/>
+                                            <outletCollection property="dayButtons" destination="SVm-DC-cYZ" collectionClass="NSMutableArray" id="441-Q0-R0H"/>
+                                            <outletCollection property="dayButtons" destination="2sa-7R-wDA" collectionClass="NSMutableArray" id="gE5-jm-WYy"/>
+                                            <outletCollection property="dayButtons" destination="dy5-5a-7J1" collectionClass="NSMutableArray" id="6tT-aD-4L3"/>
+                                            <outletCollection property="dayButtons" destination="zyk-vz-Pya" collectionClass="NSMutableArray" id="0QO-AS-Qfv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" name="LightGreen"/>
                         <constraints>
                             <constraint firstItem="zRR-mW-RWS" firstAttribute="top" secondItem="m2x-Y1-5Y7" secondAttribute="top" id="1bc-Bv-drw"/>
                             <constraint firstItem="m2x-Y1-5Y7" firstAttribute="trailing" secondItem="zRR-mW-RWS" secondAttribute="trailing" id="G8U-xJ-SFz"/>
@@ -116,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1n-aU-21o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="743"/>
+            <point key="canvasLocation" x="320.80000000000001" y="742.5787106446777"/>
         </scene>
         <!--Add Reminder-->
         <scene sceneID="9En-3L-9uk">
@@ -559,6 +777,27 @@
         </namedColor>
         <namedColor name="NavyBlue">
             <color red="0.067000001668930054" green="0.29399999976158142" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NavyBlue">
             <color red="0.067000001670000003" green="0.29399999980000002" blue="0.37299999589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

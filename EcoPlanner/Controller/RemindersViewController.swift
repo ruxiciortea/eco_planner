@@ -15,7 +15,7 @@ let kBlueColor = UIColor(named: "NavyBlue")
 let kLightGreenColor = UIColor(named: "LightGreen")
 let kBeigeColor = UIColor(named: "Beige")
 
-class RemindersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RemindersViewController: UIViewController {
  
     @IBOutlet weak var remindersTableView: UITableView!
     
@@ -34,45 +34,12 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
         remindersTableView.reloadData()
     }
     
-    // MARK: - Reminders TableView
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         remindersTableView.reloadData()
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return RemindersManager.sharedInstance.getReminders().count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuse")
-        let reminder = RemindersManager.sharedInstance.getReminders()[indexPath.row]
-        
-        cell.textLabel?.text = "\(formatateHour(number: reminder.time.hour)):\(formatateHour(number: reminder.time.minute))"
-        cell.detailTextLabel?.text = "\(reminder.title)"
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndexPaht = indexPath
-        self.performSegue(withIdentifier: "EditReminderSegue", sender: nil)
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        RemindersManager.sharedInstance.removeReminder(index: indexPath.row)
-        
-        tableView.beginUpdates()
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-        tableView.endUpdates()
-    }
-    
     // MARK: - Segue
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -97,21 +64,54 @@ class RemindersViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // MARK: - Functions
     
-    func formatateHour(number: Int) -> String {
-        if number < 10 {
-            let result = "0\(number)"
-            return result
-        }
-        
-        return "\(number)"
-    }
-    
     static func addShadowsTo(view: UIView, withOffSet _offset: Double) {
         view.layer.masksToBounds = false
         view.layer.shadowColor = UIColor.lightGray.cgColor
         view.layer.shadowOpacity = 0.8
         view.layer.shadowOffset = CGSize(width: 0, height: _offset)
         view.layer.shadowRadius = 2
+    }
+    
+}
+
+extension RemindersViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - TableView DataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return RemindersManager.sharedInstance.getReminders().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell") as! ReminderCell
+        let reminder = RemindersManager.sharedInstance.getReminders()[indexPath.row]
+        
+        cell.setReminderCell(reminder: reminder)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        RemindersManager.sharedInstance.removeReminder(index: indexPath.row)
+        
+        tableView.beginUpdates()
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+    }
+    
+    // MARK: - TableView Delegate
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPaht = indexPath
+        self.performSegue(withIdentifier: "EditReminderSegue", sender: nil)
     }
     
 }
