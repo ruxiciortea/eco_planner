@@ -53,6 +53,9 @@ class RoundButton: UIButton {
         
         let color = bool ? kBlueColor : .clear
         self.backgroundColor = color
+        
+        let textColor = bool ? kLightGreenColor : kBlueColor
+        self.setTitleColor(textColor, for: .normal)
     }
     
 }

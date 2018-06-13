@@ -155,9 +155,9 @@ class RemindersManager: NSObject {
         }
     }
     
-    // MARK: - Functions
+    // MARK: - Private Functions
     
-    func getNSFetchRequestWithPredicate(reminder: Reminder) -> NSFetchRequest<NSFetchRequestResult> {
+    private func getNSFetchRequestWithPredicate(reminder: Reminder) -> NSFetchRequest<NSFetchRequestResult> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: kReminderEntityName)
         fetchRequest.predicate = NSPredicate(format: "title == %@ AND message == %@ AND days == %@ AND time == %@",
                                              reminder.title,
@@ -168,7 +168,7 @@ class RemindersManager: NSObject {
         return fetchRequest
     }
     
-    func assignPersistentReminer(to persistentReminder: PersistentReminder, from newReminder: Reminder) {
+    private func assignPersistentReminer(to persistentReminder: PersistentReminder, from newReminder: Reminder) {
         persistentReminder.title = newReminder.title
         persistentReminder.message = newReminder.message
         persistentReminder.days = Reminder.convertWeekDaysToInts(weekDays: newReminder.days)

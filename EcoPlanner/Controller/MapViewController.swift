@@ -92,7 +92,7 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
     // MARK: - Actions
 
     @IBAction func didTapLocationButton(_ sender: Any) {
-        self.locationButton.backgroundColor = .gray
+        self.locationButton.backgroundColor = kClearColor
         self.mapView.animate(toLocation: SKPositionerService.sharedInstance().currentCoordinate, withPadding: .init(), duration: kAnimationDuration)
         self.locationButton.isEnabled = false
         
@@ -102,9 +102,9 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         }
     }
     
-    // MARK: - Functions
+    // MARK: - Private Functions
 
-    func getRegion() -> SKCoordinateRegion {
+    private func getRegion() -> SKCoordinateRegion {
         let coordinate = SKPositionerService.sharedInstance().currentCoordinate
         var region = SKCoordinateRegion.init()
         
@@ -117,7 +117,7 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
         return region
     }
     
-    func getAnnotaions() -> [SKAnnotation] {
+    private func getAnnotaions() -> [SKAnnotation] {
         var annotationArray: [SKAnnotation] = []
         let recyclingCentres: [RecyclingCentre] = RecyclingCentre.getRecyclingCentres()
         
@@ -136,59 +136,3 @@ class MapViewController: UIViewController, SKMapViewDelegate, SKCalloutViewDeleg
     }
     
 }
-
-
-//        let view = UIView()
-//        view.frame = CGRect(x: 100, y: 300, width: 300, height: 300)
-//        view.backgroundColor = .red
-//        self.view.addSubview(view)
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5 ) {
-//            UIView.animate(withDuration: 3, animations: {
-//                view.backgroundColor = .green
-//            }, completion: { (bool) in
-//                UIView.animate(withDuration: 3, animations: {
-//                    view.frame = CGRect(x: 100, y: 500, width: 200, height: 400)
-//                }, completion: { (bool) in
-//                    view.frame = CGRect(x: 100, y: 300, width: 300, height: 300)
-//                })
-//            })
-//        }
-//
-//        var sum = 0
-//
-//        DispatchQueue.main.sync {
-////            for index in 0...10000000 {
-////                print(sqrt(index))
-////                sum = sum + sqrt(index)
-////            }
-//        }
-//
-//        DispatchQueue.global(qos: .background).async {
-////            for index in 0...10000000 {
-////                print(sqrt(index))
-////                sum = sum + sqrt(index)
-////            }
-//            DispatchQueue.main.async(execute: {
-//                // update ui
-//                print(sum)
-//            })
-//        }
-//
-//        print(sum)
-//
-//        sum = 0
-//
-//        DispatchQueue.main.async {
-////            for index in 0..10000000 {
-////                print(sqrt(index))
-////                sum = sum + sqrt(index)
-////            }
-//        }
-//
-//        print(sum)
-//
-//        UIView.animate(withDuration: 10) {
-//            view.backgroundColor = .blue
-//            view.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
-//        }

@@ -13,7 +13,7 @@ import UserNotifications
 let kGreenColor = UIColor(named: "Green")
 let kBlueColor = UIColor(named: "NavyBlue")
 let kLightGreenColor = UIColor(named: "LightGreen")
-let kBeigeColor = UIColor(named: "Beige")
+let kClearColor = UIColor(named: "ClearColor")
 
 class RemindersViewController: UIViewController {
  
@@ -86,7 +86,9 @@ extension RemindersViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell") as! ReminderCell
         let reminder = RemindersManager.sharedInstance.getReminders()[indexPath.row]
         
-        cell.setReminderCell(reminder: reminder)
+        UIView.animate(withDuration: 0.2) {
+            cell.setReminderCell(reminder: reminder)
+        }
         
         return cell
     }

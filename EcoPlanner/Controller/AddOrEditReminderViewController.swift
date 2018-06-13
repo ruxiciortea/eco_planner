@@ -37,31 +37,6 @@ class AddOrEditReminderViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShowNotification(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHideNotification(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        
-        if let reminder = self.reminder {
-            titleTextField.text = reminder.title
-            messageTextField.text = reminder.message
-            selectDaysForEditingReminder(days: reminder.days)
-            
-            var dateComponents = DateComponents()
-            dateComponents.hour = reminder.time.hour
-            dateComponents.minute = reminder.time.minute
-
-            if let date = Calendar.current.date(bySettingHour: reminder.time.hour, minute: reminder.time.minute, second: 0, of: Date()) {
-                timePicker.date = date
-            }
-            
-            self.saveReminderButton.isEnabled = true
-            self.buttonsCheck = true
-            self.textFieldCheck = true
-        } else {
-            let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
-            
-            self.setZalertView(alertView: alertView, title: "Recycling day", message: "")
-            self.setZalertView(alertView: alertView, title: "Other", message: "")
-            
-            alertView.show()
-        }
     }
     
     deinit {
@@ -69,10 +44,42 @@ class AddOrEditReminderViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if self.reminder == nil {
+            let alertView: ZAlertView = ZAlertView(title: "Reminder type", message: nil, alertType: .multipleChoice)
+            
+            self.setZalertView(alertView: alertView, title: "Recycling day", message: "")
+            self.setZalertView(alertView: alertView, title: "Other", message: "")
+            
+            alertView.show()
+        }
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        self.titleTextField.becomeFirstResponder()
+        if let reminder = self.reminder {
+            UIView.animate(withDuration: 0.2) {
+                self.titleTextField.text = reminder.title
+                self.messageTextField.text = reminder.message
+                self.selectDaysForEditingReminder(days: reminder.days)
+                
+                var dateComponents = DateComponents()
+                dateComponents.hour = reminder.time.hour
+                dateComponents.minute = reminder.time.minute
+                
+                if let date = Calendar.current.date(bySettingHour: reminder.time.hour, minute: reminder.time.minute, second: 0, of: Date()) {
+                    self.timePicker.date = date
+                }
+            }
+            
+            self.saveReminderButton.isEnabled = true
+            self.buttonsCheck = true
+            self.textFieldCheck = true
+        }
     }
     
     // MARK: - Actions:
@@ -130,9 +137,9 @@ class AddOrEditReminderViewController: UIViewController {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    //MARK: - Functions
+    //MARK: - Private Functions
     
-    func getSelectedWeekDays() -> [WeekDay] {
+    private func getSelectedWeekDays() -> [WeekDay] {
         var selectedWeekDays: [WeekDay] = []
 
         for button in dayButtons {
@@ -145,7 +152,7 @@ class AddOrEditReminderViewController: UIViewController {
         return selectedWeekDays
     }
     
-    func selectDaysForEditingReminder(days: [WeekDay]) {
+    private func selectDaysForEditingReminder(days: [WeekDay]) {
         for day in days {
             for button in dayButtons {
                 if button.restorationIdentifier == "\(day)" {
@@ -155,7 +162,7 @@ class AddOrEditReminderViewController: UIViewController {
         }
     }
     
-    func setZalertView(alertView: ZAlertView, title: String, message: String) {
+    private func setZalertView(alertView: ZAlertView, title: String, message: String) {
         alertView.addButton(title, color: kBlueColor, titleColor: kLightGreenColor) { (_) in
             if title != "Other" {
                 self.titleTextField.text = title
@@ -185,9 +192,3 @@ class AddOrEditReminderViewController: UIViewController {
     }
 
 }
-
-//        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(smthTapped))
-//        gestureRecognizer.numberOfTapsRequired = 2
-//
-//        self.view.addGestureRecognizer(gestureRecognizer)
-//        self.saveReminderButton.isEnabled = self.titleTextField.text != nil && !self.titleTextField.text!.isEmpty
